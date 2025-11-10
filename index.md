@@ -1,5 +1,5 @@
 # 👋 Hi, I'm Oleg Lihvoinen
-### MDM Consultant, MS SQL &Oracle Developer, AI & LLM Data Scientist
+### Data Engineer, MDM Consultant, MS SQL & Oracle Developer, AI & LLM Data Scientist
 
 Welcome to my portfolio!  
 I build data-to-AI pipelines, fine-tune LLMs, and develop intelligent systems for real-world applications.
