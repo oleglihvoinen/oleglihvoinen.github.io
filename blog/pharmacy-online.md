@@ -10,7 +10,7 @@ description: "A web-based database application for pharmacies, doctors, and pati
 **Pharmacy Online** is a comprehensive **web database application** designed to streamline the flow of pharmaceutical information between **pharmacies, doctors, surgeries, and patients** across the U.K.  
 Its built-in intelligence helps identify key insights such as **the best-performing stores**, **staffing adequacy**, and **facility efficiency** — all updated in real time as new data is entered.
 
-🎥 **Watch the demo:** *(insert your video link here)*
+🎥 **Watch the demo:** *([insert your video link here](https://www.youtube.com/watch?v=p366Onv_HGU))*
 
 ---
 
