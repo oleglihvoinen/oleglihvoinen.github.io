@@ -61,10 +61,10 @@ Developing this project reinforced key principles of **web application design**:
 
 ---
 
-## 🔗 Demo & Source
+## 🔗 Demo 
 
 🎥 **Demo Video:** [Watch on YouTube](https://www.youtube.com/watch?v=U61NI9lAh2A)  
-💻 **GitHub Repository:** (add your link here)
+
 
 ---
 
