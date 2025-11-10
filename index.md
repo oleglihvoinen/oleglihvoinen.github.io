@@ -9,4 +9,7 @@ Check out my [GitHub projects](https://github.com/oleglihvoinen?tab=repositories
 
 ## 📝 Blog
 - [Car Dealer Web Application](blog/car-dealer-web-application.md)
+- [Data Import/Export Web Application](blog/data-import-export-web-application.md)
+- [Pharmacy Online](blog/pharmacy-online.md)
+
 
