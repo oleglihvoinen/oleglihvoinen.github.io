@@ -1,17 +1,3 @@
-# 👋 Hi, I'm Oleg Lihvoinen
-### Data Engineer, MDM Consultant, MS SQL & Oracle Developer, AI & LLM Data Scientist
-
-Welcome to my portfolio!  
-I build ETL/ELT, data-to-AI pipelines, fine-tune LLMs, and develop intelligent systems for real-world applications.
-In my previous projects I built MDM, Data Quality platforms and Oracle applications.
-
-Check out my [GitHub projects](https://github.com/oleglihvoinen?tab=repositories).
-
-## 📝 Blog
-- [Car Dealer Web Application](blog/car-dealer-web-application.md)
-- [Data Import/Export Web Application](blog/data-import-export-web-application.md)
-- [Pharmacy Online](blog/pharmacy-online.md)
-
 
 ---
 layout: default
@@ -21,11 +7,12 @@ description: "A showcase of data-driven web applications built using Oracle APEX
 
 # 👋 Welcome
 
-Hi! I’m **[Your Name]**, a developer and data specialist passionate about building **AI, data, and web-based applications**.  
+Hi! I’m **Oleg Lihvoinen**, a developer and data specialist passionate about building **AI, data, and web-based applications**.  
 This portfolio highlights several of my **Oracle APEX** and **data-driven** projects — including complete web applications for healthcare, retail, and enterprise data management.
 
 ---
-
+Check out my [GitHub projects](https://github.com/oleglihvoinen?tab=repositories).
+---
 ## 🚀 Featured Projects
 
 ### 💊 [Pharmacy Online](blog/pharmacy-online.md)
@@ -63,8 +50,8 @@ My focus is on combining **data architecture, automation, and visualization** to
 
 - 💼 Areas: Data Engineering, AI Systems, Oracle APEX, Web Development  
 - 🧰 Tools: Python, Oracle APEX, PL/SQL, Azure, MLflow, LangChain  
-- 🌍 Location: [Your City, Country]  
-- 📫 Contact: [your.email@example.com](mailto:your.email@example.com)
+- 🌍 Location: Järvenpää 
+- 📫 Contact: [lihvoinenoleg@gmail.com](mailto:lihvoinenoleg@gmail.com)
 
 ---
 
