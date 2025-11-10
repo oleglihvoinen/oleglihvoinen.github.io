@@ -45,14 +45,6 @@ You can download and deploy the application package directly from GitHub:
 
 ## 🖼️ Screenshots
 
-To showcase your webshop design, you can embed screenshots directly in Markdown.
-
-### Example
-
-If your screenshots are stored in your GitHub repo under `assets/images/webshop1.png` and `assets/images/webshop2.png`,  
-you can display them like this:
-
-```markdown
-![Webshop Front-End Screenshot](https://raw.githubusercontent.com/oleglihvoinen/oracle-apex_applications/master/assets/images/webshop1.png)
+![Webshop Front-End Screenshot]([https://raw.githubusercontent.com/oleglihvoinen/oracle-apex_applications/master/assets/images/webshop1.png](https://github.com/oleglihvoinen/oleglihvoinen.github.io/blob/main/assets/images/webshop1.png))
 
 ![Webshop Admin Dashboard](https://raw.githubusercontent.com/oleglihvoinen/oracle-apex_applications/master/assets/images/webshop2.png)
