@@ -45,6 +45,6 @@ You can download and deploy the application package directly from GitHub:
 
 ## 🖼️ Screenshots
 
-![Webshop Front-End Screenshot]([https://raw.githubusercontent.com/oleglihvoinen/oracle-apex_applications/master/assets/images/webshop1.png](https://github.com/oleglihvoinen/oleglihvoinen.github.io/blob/main/assets/images/webshop1.png))
+![Webshop Front-End Screenshot](https://github.com/oleglihvoinen/oleglihvoinen.github.io/blob/main/assets/images/webshop1.png?raw=true)
 
 ![Webshop Admin Dashboard](https://raw.githubusercontent.com/oleglihvoinen/oracle-apex_applications/master/assets/images/webshop2.png)
