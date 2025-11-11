@@ -29,6 +29,15 @@ Easily extendable for your own data or enterprise use.
 
 ---
 
+### 💰 [Loan Default Probability Prediction](https://oleglihvoinen.github.io/blog/loan-default-prediction.html)
+A machine learning model that predicts the **probability of loan repayment**, evaluated with **ROC-AUC**.  
+Includes data preprocessing, feature encoding, model training, and submission generation.
+
+> 📊 *Technologies:* Python, scikit-learn, pandas, Gradient Boosting, AUC  
+> 🧠 *Focus:* Credit risk modeling and probabilistic classification
+
+---
+
 ### 🧭 Master Data Management Tool
 A browser-based Master Data Management (MDM) solution built with Oracle APEX.  
 Features CSV import/export, business-rules management and validation runs, validation-error dashboards, and data management operations (insert/update/delete) for cleansing and harmonisation.  
