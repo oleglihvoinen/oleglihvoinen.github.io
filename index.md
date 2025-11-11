@@ -16,6 +16,18 @@ Explore my code and projects on GitHub: https://github.com/oleglihvoinen?tab=rep
 
 ## 🚀 Featured Projects
 
+---
+
+### 💬 Local LLM RAG Chatbot
+A **Retrieval-Augmented Generation (RAG)** chatbot powered by **Ollama**, **ChromaDB**, and **FastAPI** —  
+with an optional **Streamlit UI** for interactive chat.
+
+Runs fully **offline** using local LLMs (like `llama3`) or connects to **OpenAI** when available.  
+Easily extendable for your own data or enterprise use.
+
+👉 [**Read full post →**](blog/llm-rag.md)
+
+
 ### 🧭 Master Data Management Tool
 A browser-based Master Data Management (MDM) solution built with Oracle APEX.  
 Features CSV import/export, business-rules management and validation runs, validation-error dashboards, and data management operations (insert/update/delete) for cleansing and harmonisation.  
