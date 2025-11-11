@@ -8,7 +8,7 @@ permalink: /
 # 👋 Welcome
 
 Hi — I’m **Oleg Lihvoinen**, a developer and data specialist focused on building practical AI, data, and web applications.  
-This portfolio highlights production-ready Oracle APEX and data-driven projects — complete web applications for healthcare, retail, and enterprise data management.
+This portfolio highlights production-ready AI, LLM, Ollama, and data-driven projects — complete web applications for healthcare, retail, and enterprise data management.
 
 [Explore my code and projects on GitHub](https://github.com/oleglihvoinen?tab=repositories)
 
@@ -85,7 +85,7 @@ Useful for data quality, harmonization, and migrations — works with Oracle XE.
 I design and build intelligent data systems — from simple web apps to advanced AI tools integrating LLMs and analytics. I combine data architecture, automation, and visualization to make information accessible and actionable.
 
 - Areas: Data Engineering, AI Systems, Oracle APEX, Web Development  
-- Tools: Python, Oracle APEX, PL/SQL, Azure, MLflow, LangChain  
+- Tools: Python, MS SQL, ChromaDB, Streamlit, Ollama, OpenAI, FastAPI, Oracle APEX, PL/SQL, Azure, MLflow, LangChain  
 - Location: Järvenpää, Finland  
 - Contact: [lihvoinenoleg@gmail.com](mailto:lihvoinenoleg@gmail.com)
 
@@ -93,6 +93,8 @@ I design and build intelligent data systems — from simple web apps to advanced
 
 ## 📝 Blog (all posts)
 
+- [Local LLM RAG Chatbot](/blog/llm-rag)  
+- [Loan Default Probability Prediction](/blog/loan-default-prediction)  
 - [Master Data Management Tool](/blog/master-data-management)  
 - [Pharmacy Online](/blog/pharmacy-online)  
 - [Webshop](/blog/webshop)  
