@@ -45,7 +45,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 
 - Areas: Data Engineering, AI Systems, Oracle APEX, Web Development Full Stack 
 - Tools: MS Fabric, Power BI, Azure, AWS, GCP, MLflow, LangChain
-- Programming Languages: SQL/T-SQL, KSQL, PL/SQL, Python, C/C++, DAX, Matlab, Mathematica
+- Programming Languages: SQL/T-SQL, KQL, PL/SQL, Python, C/C++, DAX, Matlab, Mathematica
 - Databases: MS SQL, Oracle, MySQL, PostgreSQL, MongoDB
 - Location: Järvenpää, Finland  
 - Contact: [lihvoinenoleg@gmail.com](mailto:lihvoinenoleg@gmail.com)
