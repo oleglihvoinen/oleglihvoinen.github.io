@@ -27,6 +27,7 @@ Easily extendable for your own data or enterprise use.
 
 👉 [**Read full post →**](blog/llm-rag.md)
 
+---
 
 ### 🧭 Master Data Management Tool
 A browser-based Master Data Management (MDM) solution built with Oracle APEX.  
