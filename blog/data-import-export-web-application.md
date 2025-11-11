@@ -10,7 +10,7 @@ description: "A web-based tool for importing and exporting CSV and XML data dire
 Working with databases often means dealing with countless spreadsheets, data migrations, and format conversions.  
 The **Data Import/Export Web Application** makes all of this effortless by enabling users to **quickly load and unload data** between **Oracle databases** and **CSV/XML files** — all through a **browser-based interface**.
 
-🎥 **Watch the demo:** *(https://www.youtube.com/watch?v=g0KXfQ5iJ2Y)*
+🎥 **Watch the demo:** [https://www.youtube.com/watch?v=g0KXfQ5iJ2Y](https://www.youtube.com/watch?v=g0KXfQ5iJ2Y)
 
 ---
 
@@ -58,7 +58,7 @@ This tool is particularly valuable in scenarios where **fast, reliable data move
 
 ## 🔗 Demo
 
-🎥 **Watch in action:** *(https://www.youtube.com/watch?v=g0KXfQ5iJ2Y)*  
+🎥 **Watch in action:** [https://www.youtube.com/watch?v=g0KXfQ5iJ2Y](https://www.youtube.com/watch?v=g0KXfQ5iJ2Y)
 
 If you’d like to explore or customize this project, feel free to reach out or fork the source code from my GitHub repository.
 
