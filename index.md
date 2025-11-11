@@ -10,7 +10,7 @@ permalink: /
 Hi — I’m **Oleg Lihvoinen**, a developer and data specialist focused on building practical AI, data, and web applications.  
 This portfolio highlights production-ready Oracle APEX and data-driven projects — complete web applications for healthcare, retail, and enterprise data management.
 
-Explore my code and projects on GitHub: https://github.com/oleglihvoinen?tab=repositories
+Explore my code and projects on GitHub: (https://github.com/oleglihvoinen?tab=repositories)
 
 ---
 
@@ -43,8 +43,10 @@ Useful for data quality, harmonization, and migrations — works with Oracle XE.
 
 I design and build intelligent data systems — from simple web apps to advanced AI tools integrating LLMs and analytics. I combine data architecture, automation, and visualization to make information accessible and actionable.
 
-- Areas: Data Engineering, AI Systems, Oracle APEX, Web Development  
-- Tools: Python, Oracle APEX, PL/SQL, Azure, MLflow, LangChain  
+- Areas: Data Engineering, AI Systems, Oracle APEX, Web Development Full Stack 
+- Tools: MS Fabric, Power BI, Azure, AWS, GCP, MLflow, LangChain
+- Programming Languages: SQL/T-SQL, KSQL, PL/SQL, Python, C/C++, DAX, Matlab, Mathematica
+- Databases: MS SQL, Oracle, MySQL, PostgreSQL, MongoDB
 - Location: Järvenpää, Finland  
 - Contact: [lihvoinenoleg@gmail.com](mailto:lihvoinenoleg@gmail.com)
 
