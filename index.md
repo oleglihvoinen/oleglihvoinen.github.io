@@ -59,6 +59,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 - [Car Dealer Web Application](/blog/car-dealer-web-application)  
 - [Data Import/Export Web Application](/blog/data-import-export-web-application)  
 - [Oracle XE 10g Size Limit and Datafile Resizing – Solving ORA-03297](/blog/oracle-xe-datafile-resize)
+- [Custom Error Page in Oracle APEX](/blog/custom-error-page-apex)
 
 ---
 
