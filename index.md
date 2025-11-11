@@ -18,7 +18,7 @@ Check out my [GitHub projects](https://github.com/oleglihvoinen?tab=repositories
 ### 💊 [Pharmacy Online](blog/pharmacy-online.md)
 A web-based pharmaceutical management system connecting pharmacies, doctors, and patients across the U.K.  
 Features real-time analytics, prescription tracking, and intelligent reporting.  
-🎥 *[Watch the demo](#)*
+🎥 *[Watch the demo](https://www.youtube.com/watch?v=p366Onv_HGU)*
 
 ---
 
@@ -61,6 +61,7 @@ My focus is on combining **data architecture, automation, and visualization** to
 - [Webshop](blog/webshop.md)  
 - [Car Dealer Web Application](blog/car-dealer-web-application.md)  
 - [Data Import/Export Web Application](blog/data-import-export-web-application.md)
+- [Oracle XE 10g Size Limit and Datafile Resizing – Solving ORA-03297](blog/oracle-xe-datafile-resize.md)
 
 ---
 
