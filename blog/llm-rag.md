@@ -1,11 +1,5 @@
 
----
-layout: post
-title: "💬 Local LLM RAG Chatbot"
-date: 2025-11-11
-categories: [AI, LLM, FastAPI, Streamlit, Ollama, ChromaDB]
-tags: [RAG, LLM, AI, Python, Chatbot, OpenAI, Local AI]
----
+
 
 A **Retrieval-Augmented Generation (RAG)** chatbot powered by **Ollama**, **ChromaDB**, and **FastAPI** --- with an optional **Streamlit UI** for interactive chat.
 The system can run entirely **offline** using local LLMs (like `llama3`) or connect to **OpenAI** when available.
