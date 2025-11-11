@@ -1,3 +1,7 @@
 title: "Oleg Lihvoinen – Data Engineer, BI Developer, AI & Data Scientist"
 description: "Portfolio of AI, LLM, Data Science projects, MDM and Oracle applications"
 theme: jekyll-theme-cayman
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
