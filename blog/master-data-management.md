@@ -8,7 +8,7 @@ permalink: /blog/master-data-management
 
 # Master Data Management Tool
 
-See this tool in action. (Add demo link or screenshots to illustrate usage.)
+[See this tool in action.](https://www.youtube.com/watch?v=OIjmr7cHvlM)
 
 This Master Data Management (MDM) tool is built in Oracle Application Express (APEX). It provides a full set of data management capabilities focused on importing, validating, correcting and exporting business data — all through a browser-based interface.
 
@@ -69,12 +69,4 @@ The application is designed for operational data stewards and administrators who
 
 ---
 
-## Next Steps
 
-- Add demo screenshots or a short screencast link under "See this tool in action."  
-- Provide sample DDL and an importable APEX export for quick evaluation.  
-- Expand the rules engine to support rule-versioning and scheduled validation runs.
-
----
-
-If you’d like, I can generate a ready-to-run DDL script and a short installation checklist tailored for Oracle XE, or produce the APEX export-ready README. Tell me which you prefer next.
