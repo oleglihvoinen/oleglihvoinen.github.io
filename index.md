@@ -61,6 +61,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 - [Oracle XE 10g Size Limit and Datafile Resizing – Solving ORA-03297](/blog/oracle-xe-datafile-resize)
 - [Custom Error Page in Oracle APEX](/blog/custom-error)
 - [Multiple Star Rating in APEX with jQuery](/blog/multiple-star-rating-apex)
+  
 ---
 
 > “From data to deployment — turning ideas into working systems.”
