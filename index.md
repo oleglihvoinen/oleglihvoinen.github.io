@@ -16,6 +16,13 @@ Explore my code and projects on GitHub: https://github.com/oleglihvoinen?tab=rep
 
 ## 🚀 Featured Projects
 
+### 🧭 Master Data Management Tool
+A browser-based Master Data Management (MDM) solution built with Oracle APEX.  
+Features CSV import/export, business-rules management and validation runs, validation-error dashboards, and data management operations (insert/update/delete) for cleansing and harmonisation.  
+🔗 [See details and demo](/blog/master-data-management)
+
+---
+
 ### 💊 [Pharmacy Online](/blog/pharmacy-online)
 A web database connecting pharmacies, doctors, surgeries, and patients across the U.K.  
 Real-time analytics, prescription tracking, automated reporting.  
@@ -33,8 +40,7 @@ Supports product/catalog management, order processing, and responsive UI.
 ### 📝 [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
 A fully customizable blog application with a front-end Blog Reader and an admin Back‑Office (Blog Admin).  
 Features article management, comments, file uploads, visitor stats and a usage dashboard.  
-⤓ Install by importing the APEX export files and running the provided DDL.  
-(Works on Oracle XE or any Oracle DB with APEX.)
+⤓ [Download from SourceForge](https://sourceforge.net/projects/blogging-platform/)
 
 ---
 
@@ -65,6 +71,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 
 ## 📝 Blog (all posts)
 
+- [Master Data Management Tool](/blog/master-data-management)  
 - [Pharmacy Online](/blog/pharmacy-online)  
 - [Webshop](/blog/webshop)  
 - [Car Dealer Web Application](/blog/car-dealer-web-application)  
