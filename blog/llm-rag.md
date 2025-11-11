@@ -269,15 +269,14 @@ Built with ❤️ using:
 
 | Screenshot | Description |
 | --- | --- |
-| ![Chat UI](img/ui_chat.png) | Streamlit chatbot interface |
-| ![Architecture](img/architecture.png) | Project architecture diagram |
+| ![Chat UI](assets/images/llm1.png) | Streamlit chatbot interface |
+| ![Architecture](assets/images/llm2.jpg) | Project architecture diagram |
 
 * * * * *
 
 > 💡 **Tip:** This setup allows you to run an entirely offline local AI assistant.\
 > You can expand it to include PDFs, SQL data, or internal documents --- simply adapt `ingest.py` to your preferred data source.
 
-```
 
 ---
 
