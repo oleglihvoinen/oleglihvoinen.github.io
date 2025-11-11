@@ -264,13 +264,13 @@ Built with ❤️ using:
 
 * * * * *
 
-🖼️ Optional Screenshots
+🖼️ Screenshots
 ------------------------
 
 | Screenshot | Description |
 | --- | --- |
-| ![Chat UI](assets/images/llm1.jpg) | Streamlit chatbot interface |
-| ![Architecture](assets/images/llm2.png) | Project architecture diagram |
+| ![Chat UI](/assets/images/llm1.jpg) | Streamlit chatbot interface |
+| ![Architecture](/assets/images/llm2.png) | Project architecture diagram |
 
 * * * * *
 
