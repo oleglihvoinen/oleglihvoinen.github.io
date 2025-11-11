@@ -141,6 +141,12 @@ Verification and safety
   ```
 - Test installation on a development instance (Oracle XE) before deploying to production.
 
+## 🖼️ Screenshots
+
+![Blogging platform](https://github.com/oleglihvoinen/oleglihvoinen.github.io/blob/main/assets/images/blog1.webp?raw=true)
+
+![Blogging platform](https://github.com/oleglihvoinen/oleglihvoinen.github.io/blob/main/assets/images/blog2.webp?raw=true)
+
 
 ## ✅ Summary
 
