@@ -10,7 +10,7 @@ permalink: /
 Hi — I’m **Oleg Lihvoinen**, a developer and data specialist focused on building practical AI, data, and web applications.  
 This portfolio highlights production-ready Oracle APEX and data-driven projects — complete web applications for healthcare, retail, and enterprise data management.
 
-[Explore my code and projects on GitHub] (https://github.com/oleglihvoinen?tab=repositories)
+[Explore my code and projects on GitHub](https://github.com/oleglihvoinen?tab=repositories)
 
 ---
 
