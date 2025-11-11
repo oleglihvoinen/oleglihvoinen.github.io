@@ -16,6 +16,16 @@ Explore my code and projects on GitHub: [My projects](https://github.com/oleglih
 
 ## 🚀 Featured Projects
 
+---
+
+### 📝 [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
+A fully customizable blog application with a front-end Blog Reader and an admin Back‑Office (Blog Admin).  
+Features article management, comments, file uploads, visitor stats and a usage dashboard.  
+⤓ Install by importing the APEX export files and running the provided DDL.  
+(Works on Oracle XE or any Oracle DB with APEX.)
+
+---
+
 ### 💊 Pharmacy Online
 A web database connecting pharmacies, doctors, surgeries, and patients across the U.K.  
 Real-time analytics, prescription tracking, automated reporting.  
