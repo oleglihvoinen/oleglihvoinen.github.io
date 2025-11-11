@@ -180,7 +180,7 @@ The challenge pushes participants to blend **physics, machine learning, and game
 
 ---
 
-![NFL Big Data Bowl 2026 Pipeline](nfl_big_data_bowl_2026_pipeline.png)
+![NFL Big Data Bowl 2026 Pipeline](/assets/images/nfl_big_data_bowl_2026_pipeline.png)
 
 ---
 
