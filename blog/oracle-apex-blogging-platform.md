@@ -83,6 +83,65 @@ The admin app is intended to be easy to adapt — change templates, add fields o
 
 ---
 
+## ⤓ Download
+
+You can download the Oracle APEX Blogging Platform package from SourceForge:
+
+- Project page: https://sourceforge.net/projects/blogging-platform/  
+- Direct latest-download URL (SourceForge redirect):  
+  https://sourceforge.net/projects/blogging-platform/files/latest/download
+
+Quick download (example using wget):
+
+```bash
+# Download latest package (SourceForge will redirect to a mirror)
+wget "https://sourceforge.net/projects/blogging-platform/files/latest/download" -O blogging-platform-latest.zip
+
+# Unpack the archive
+unzip blogging-platform-latest.zip -d blogging-platform
+cd blogging-platform
+ls -la
+```
+
+What to look for in the package
+- DDL script(s) (e.g. ddl.sql) — creates tables, sequences, triggers
+- APEX application export file(s) (.sql) for Blog Reader and Blog Admin
+- Static files / images / documentation (README, screenshots)
+- Optional installer or README with version notes
+
+Installation summary (typical steps)
+1. Inspect README and package contents to confirm file names and APEX version compatibility.  
+2. Prepare the database:
+   - If needed, install Oracle XE or use an Oracle DB with APEX.
+   - Create the parsing schema (if required) and grant needed privileges.
+3. Run the DDL script(s) as the target schema (or follow package README). Example using SQL*Plus:
+   ```bash
+   sqlplus sys@ORCL as sysdba @ddl.sql
+   -- or as the parsing schema:
+   sqlplus myschema/mypassword@ORCL @ddl.sql
+   ```
+4. Import APEX applications:
+   - In APEX: Application Builder → Import → choose the exported application .sql files (Blog Reader and Blog Admin).
+   - Set the correct parsing schema during import if prompted.
+5. Upload static files and images:
+   - Shared Components → Static Application Files (or use the APEX upload utility).
+6. Configure application settings:
+   - Update Authentication scheme, email settings, file directories, and any Substitution Strings (for example file paths or API keys).
+7. Test:
+   - Open the Blog Reader front-end and the Blog Admin back-office; create an article, upload an image, post a comment and verify dashboard metrics.
+8. Troubleshoot:
+   - If imports fail, confirm APEX version compatibility and that DDL ran successfully.
+   - Check database user privileges and directory grants for file uploads.
+
+Verification and safety
+- Inspect any included README or CHANGELOG for version and compatibility notes.
+- If the package includes checksums (SHA256), verify the downloaded file before running scripts:
+  ```bash
+  sha256sum blogging-platform-latest.zip
+  ```
+- Test installation on a development instance (Oracle XE) before deploying to production.
+
+
 ## ✅ Summary
 
 This Oracle APEX Blogging Platform is a lightweight, extensible blogging solution suitable for internal blogs, project publications, or small public sites. With APEX you can quickly modify templates, add features, and scale the functionality to match project needs.
