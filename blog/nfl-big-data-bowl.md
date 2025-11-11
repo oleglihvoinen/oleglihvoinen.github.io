@@ -180,6 +180,10 @@ The challenge pushes participants to blend **physics, machine learning, and game
 
 ---
 
+![NFL Big Data Bowl 2026 Pipeline](nfl_big_data_bowl_2026_pipeline.png)
+
+---
+
 **Author:** Oleg Lihvoinen  
 **Tags:** `AI`, `Sports Analytics`, `Machine Learning`, `Trajectory Forecasting`, `NFL Big Data Bowl`
 ```
