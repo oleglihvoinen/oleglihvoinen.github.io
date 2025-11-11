@@ -1,5 +1,4 @@
 
----
 layout: default
 title: "AI & Web Applications Portfolio – [Your Name]"
 description: "A showcase of data-driven web applications built using Oracle APEX, Python, and modern web technologies."
