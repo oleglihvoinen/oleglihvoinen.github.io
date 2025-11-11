@@ -145,5 +145,3 @@ Verification and safety
 ## ✅ Summary
 
 This Oracle APEX Blogging Platform is a lightweight, extensible blogging solution suitable for internal blogs, project publications, or small public sites. With APEX you can quickly modify templates, add features, and scale the functionality to match project needs.
-
-If you’d like, I can: provide a ready-to-run DDL script formatted for copy/paste, produce an installation checklist for Oracle XE, or generate sample APEX export/import steps — tell me which you prefer.
