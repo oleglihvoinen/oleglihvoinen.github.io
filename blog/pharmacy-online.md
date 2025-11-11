@@ -1,115 +1,100 @@
 ---
 layout: default
-title: "Pharmacy Online – Smart Pharmaceutical Management Across the U.K."
+title: "Pharmacy Online — Smart Pharmaceutical Management Across the U.K."
 date: 2025-11-10
-description: "A web-based database application for pharmacies, doctors, and patients. Enables safe, efficient, and intelligent medicine management with real-time analytics."
+description: "A web-based database application for pharmacies, doctors, and patients that enables safe, efficient and intelligent medicine management with real-time analytics."
 ---
 
-# 💊 Pharmacy Online – Smart Pharmaceutical Management Across the U.K.
+# 💊 Pharmacy Online — Smart Pharmaceutical Management Across the U.K.
 
-**Pharmacy Online** is a comprehensive **web database application** designed to streamline the flow of pharmaceutical information between **pharmacies, doctors, surgeries, and patients** across the U.K.  
-Its built-in intelligence helps identify key insights such as **the best-performing stores**, **staffing adequacy**, and **facility efficiency** — all updated in real time as new data is entered.
+Pharmacy Online is a web database application that streamlines the flow of pharmaceutical information between pharmacies, doctors (surgeries) and patients across the U.K. Its built-in intelligence provides real‑time operational insights such as best‑performing stores, staffing adequacy, and facility efficiency — updated as new data arrives.
 
-🎥 **Watch the demo:** *([insert your video link here](https://www.youtube.com/watch?v=p366Onv_HGU))*
-
----
-
-## 🧠 Overview
-
-This project aims to **improve safety and efficiency** in the dispensing of pharmaceutical drugs by automating communication, prescription management, and reporting processes.
-
-As data flows between healthcare professionals, the system automatically calculates statistics and displays **interactive charts and tables** for immediate insights.  
-It’s more than just a data-entry system — it’s a **decision-support tool** for improving patient care and operational performance.
+🎥 Watch the demo: https://www.youtube.com/watch?v=p366Onv_HGU
 
 ---
 
-## 🩺 Main Features
+## 🧠 Project Overview
 
-### 👩‍⚕️ Pharmacist Functions
-- Registers new users: surgeries, doctors, other pharmacists, and patients  
-- Defines available medicines and assigns them to patients  
-- Processes incoming patient orders  
-- Sends new user credentials via **email and/or mobile**  
+This project improves safety and efficiency in medicine dispensing by automating prescription workflows, communication, and reporting. As data flows through the system, it calculates statistics and visualises them with interactive charts and tables, turning raw records into decision‑support for clinicians and managers.
 
-### 👨‍⚕️ Doctor Functions
-- Updates **patient prescription messages**  
-- Reviews and modifies prescriptions when necessary  
+---
 
-### 👤 Patient Functions
-- Logs in securely to view and order prescribed medicines  
-- Can only repeat an order **after a defined period** (to ensure proper dosage intervals)  
-- Receives medicine deliveries directly from the assigned pharmacist  
+## 🩺 Key Features
 
-### 🏥 Data Management & Reporting
-- Each **patient** is linked to a **doctor**, and each doctor is linked to a **surgery**  
-- Pharmacists maintain data consistency across all user groups  
-- Generates **customizable PDF documents** (e.g., prescriptions, invoices, delivery notes)  
+- User management and roles
+  - Register surgeries, doctors, pharmacists and patients
+  - Assign patients to doctors and pharmacies
+- Prescription lifecycle
+  - Create, review and modify prescriptions
+  - Enforce refill intervals to protect patient safety
+- Order processing & delivery
+  - Secure patient login for viewing and ordering prescribed medicines
+  - Direct dispatch from assigned pharmacist
+- Notifications
+  - Send credentials and alerts via email and/or SMS
+- Documents & reporting
+  - Generate branded PDF documents (prescriptions, invoices, delivery notes)
+  - Real‑time dashboards for operational KPIs
 
 ---
 
 ## 🧾 Document Generation
 
-All essential documents can be generated automatically in **PDF format**.  
-The layout is fully customizable using:
-
-- [**JasperReports**](http://www.jaspersoft.com)  
-- **Oracle BI Publisher** (license required)
-
-This allows institutions to match reports to their branding and regulatory standards.
+Reports and documents are produced in PDF and can be customised to match institutional branding and compliance needs. Supported engines:
+- JasperReports (open-source)
+- Oracle BI Publisher (enterprise license)
 
 ---
 
-## ⚙️ Technical Setup
+## ⚙️ Technical Stack
 
-- **Platform:** Oracle APEX (Application Express)  
-- **Database:** Oracle Express Edition (XE) – *free and easy to install*  
-- **Hosting:** Local PC or on-premise server (1 GB RAM minimum)  
-- **Frontend:** Web-based interface (no installation required for end users)  
-- **Reports:** PDF generation with JasperReports / BI Publisher  
+- Platform: Oracle APEX (Application Express)  
+- Database: Oracle Database Express Edition (XE)  
+- Hosting: Local PC or on‑premise server (1 GB RAM minimum recommended)  
+- Frontend: Web UI (no client installation)  
+- Reporting: JasperReports / Oracle BI Publisher for PDF generation
 
-Because the app is fully web-based, **no additional setup** is required for clients — just access through a browser.
-
----
-
-## 📊 Real-Time Analytics
-
-The system continuously analyzes operational data to answer critical questions:
-- 🏆 Which pharmacy store performs best in terms of staffing and adequacy?  
-- ⚠️ Which store faces the most challenges?  
-- 📈 What are the trends in prescription orders and fulfillment rates?  
-
-The application automatically generates **tables and graphical charts**, providing clear insights for performance monitoring and management decisions.
+The app is fully browser‑based so end users need only a web browser to access the system.
 
 ---
 
-## 🧩 Use Cases
+## 📊 Real‑Time Analytics & Reporting
 
-- **National pharmacy chains** seeking operational transparency  
-- **Independent pharmacists** managing patients and prescriptions digitally  
-- **Healthcare organizations** aiming for better drug dispensing workflows  
-- **Research or audit teams** analyzing pharmacy performance data  
+Pharmacy Online continually analyzes operational data to answer critical questions:
+- Which stores perform best on staffing and service metrics?
+- Which locations require intervention?
+- What are the trends in prescriptions and fulfillment?
+
+Dashboards surface these answers with charts, trend lines and filterable tables for quick diagnostics and long‑term planning.
 
 ---
 
-## 🧠 Impact
+## 🧩 Typical Use Cases
 
-Pharmacy Online empowers healthcare providers with:
-- ✅ Faster and safer medicine management  
-- ✅ Real-time insights into operational performance  
-- ✅ Digital communication between doctors, pharmacists, and patients  
-- ✅ Reduced errors through structured workflows  
+- National pharmacy chains needing consistent operational visibility  
+- Independent pharmacies modernising patient and prescription workflows  
+- Healthcare organisations seeking safer, auditable dispensing processes  
+- Audit and research teams analysing pharmacy performance data
+
+---
+
+## 🧠 Impact & Benefits
+
+- Faster and safer medicine management  
+- Real‑time operational insights for managers and clinicians  
+- Digital communication between doctors, pharmacists and patients  
+- Reduced manual errors through structured, rule‑driven workflows
 
 ---
 
 ## 🔗 Demo
 
-🎥 **Watch in action:** *(https://www.youtube.com/watch?v=p366Onv_HGU))*
+Watch the application in action: https://www.youtube.com/watch?v=p366Onv_HGU
 
 ---
 
-### 💬 Conclusion
+### 💬 Summary
 
-The **Pharmacy Online** application demonstrates how well-designed data systems can improve healthcare operations at scale.  
-By connecting doctors, pharmacists, and patients through one intelligent web platform, it ensures **safer, faster, and more transparent dispensing** of medicines across the U.K.
+Pharmacy Online demonstrates how a thoughtfully designed data system can improve healthcare operations at scale — connecting stakeholders in one intelligent platform to ensure safer, faster and more transparent medicine dispensing across the U.K.
 
-> *“Digital transformation for safer, smarter healthcare.”*
+> “Digital transformation for safer, smarter healthcare.”
