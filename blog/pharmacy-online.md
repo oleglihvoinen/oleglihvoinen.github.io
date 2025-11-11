@@ -9,7 +9,7 @@ description: "A web-based database application for pharmacies, doctors, and pati
 
 Pharmacy Online is a web database application that streamlines the flow of pharmaceutical information between pharmacies, doctors (surgeries) and patients across the U.K. Its built-in intelligence provides real‑time operational insights such as best‑performing stores, staffing adequacy, and facility efficiency — updated as new data arrives.
 
-🎥 Watch the demo: https://www.youtube.com/watch?v=p366Onv_HGU
+🎥 Watch the demo: [https://www.youtube.com/watch?v=p366Onv_HGU](https://www.youtube.com/watch?v=p366Onv_HGU)
 
 ---
 
@@ -89,7 +89,7 @@ Dashboards surface these answers with charts, trend lines and filterable tables 
 
 ## 🔗 Demo
 
-Watch the application in action: https://www.youtube.com/watch?v=p366Onv_HGU
+Watch the application in action: [https://www.youtube.com/watch?v=p366Onv_HGU](https://www.youtube.com/watch?v=p366Onv_HGU)
 
 ---
 
