@@ -1,14 +1,5 @@
 
----
-layout: post
-title: "Building a Bitcoin Price Prediction System with Machine Learning"
-categories: [machine-learning, cryptocurrency, python, data-science]
-tags: [bitcoin, lstm, random-forest, time-series-prediction, cryptocurrency]
-author: Oleg Lihvoinen
-excerpt: "A comprehensive journey through building a complete Bitcoin price prediction system using LSTM neural networks and Random Forest algorithms. Learn how to handle real cryptocurrency data, engineer features, and evaluate model performance."
-mathjax: true
-image: /assets/images/bitcoin/prediction_comparison.png
----
+
 
 # Building a Bitcoin Price Prediction System with Machine Learning
 
