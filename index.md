@@ -17,6 +17,13 @@ This portfolio highlights production-ready AI, LLM, Ollama, and data-driven proj
 ## 🚀 Featured Projects
 
 ---
+### 🔮 [Bitcoin Price Prediction with Machine Learning](blog/bitcoin-price-prediction-ml.html)
+A comprehensive machine learning system that predicts **Bitcoin price movements** using LSTM neural networks and Random Forest algorithms, evaluated with **multiple time-series metrics**.  
+Includes real-time data fetching, technical indicator engineering, model comparison, and tomorrow's price predictions.
+
+> 📊 *Technologies:* Python, TensorFlow, scikit-learn, LSTM, Random Forest, TA-Lib  
+> 🧠 *Focus:* Time series forecasting, cryptocurrency markets, and financial ML
+---
 
 ### 💬 Local LLM RAG Chatbot
 A **Retrieval-Augmented Generation (RAG)** chatbot powered by **Ollama**, **ChromaDB**, and **FastAPI** —  
@@ -93,6 +100,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 
 ## 📝 Blog (all posts)
 
+- [Bitcoin Price Prediction with Machine Learning](/blog/bitcoin-price-prediction-ml.html)
 - [Local LLM RAG Chatbot](/blog/llm-rag)  
 - [Loan Default Probability Prediction](/blog/loan-default-prediction)  
 - [Master Data Management Tool](/blog/master-data-management)  
