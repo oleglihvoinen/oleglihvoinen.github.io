@@ -4,7 +4,7 @@
 
 *by **Oleg Lihvoinen***
 *GitHub Pages: [oleglihvoinen.github.io](https://oleglihvoinen.github.io)*
-*Video demo: [link to video placeholder — replace with your YouTube link]*
+*Video demo: [link to video placeholder]*
 
 ---
 
@@ -335,6 +335,6 @@ Move from `ListView` to `RecyclerView` and add data persistence with Room or Sha
 
 ## 🎥 Video Demo
 
-[👉 Watch the project running here](#) *(replace with your YouTube or Loom link)*
+[👉 Watch the project running here](#) *(link)*
 
 
