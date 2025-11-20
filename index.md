@@ -90,6 +90,7 @@ Useful for data quality, harmonization, and migrations — works with Oracle XE.
 ### [How I Built a Powerful DBA Tool with Oracle APEX](/blog/dba-tool) 
   A deep dive into how I designed and developed my own DBA tool using Oracle APEX, featuring session monitoring, performance analytics, schema exploration, health checks, and secure user management.  
   _[Read more →](./dba-tool.md)_
+  📦 [Download package](https://github.com/oleglihvoinen/oracle-apex_applications/blob/master/dba_tool.zip)
 
 ---
 
