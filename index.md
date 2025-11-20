@@ -121,6 +121,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 - [Wanda the Fish — Fortunes in Oracle APEX](/blog/wanda-the-fish)  
 - [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
 - [How I Built a Powerful DBA Tool with Oracle APEX](/blog/dba-tool)
+
 ---
 
 > “From data to deployment — turning ideas into working systems.”
