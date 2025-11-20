@@ -110,7 +110,7 @@ I design and build intelligent data systems — from simple web apps to advanced
 - [Bitcoin Price Prediction with Machine Learning](/blog/bitcoin-price-prediction-ml.html)
 - [Local LLM RAG Chatbot](/blog/llm-rag)  
 - [Loan Default Probability Prediction](/blog/loan-default-prediction)  
-- [Master Data Management Too (Oracle APEX)l](/blog/master-data-management)  
+- [Master Data Management Tool (Oracle APEX)](/blog/master-data-management)  
 - [Pharmacy Online (Oracle APEX)](/blog/pharmacy-online)  
 - [Webshop (Oracle APEX)](/blog/webshop)  
 - [Car Dealer Web Application (Oracle APEX)](/blog/car-dealer-web-application)  
