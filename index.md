@@ -87,6 +87,12 @@ Useful for data quality, harmonization, and migrations — works with Oracle XE.
 
 ---
 
+### How I Built a Powerful DBA Tool with Oracle APEX 
+  A deep dive into how I designed and developed my own DBA tool using Oracle APEX, featuring session monitoring, performance analytics, schema exploration, health checks, and secure user management.  
+  _[Read more →](./dba-tool.md)_
+
+---
+
 ## 🧠 About Me
 
 I design and build intelligent data systems — from simple web apps to advanced AI tools integrating LLMs and analytics. I combine data architecture, automation, and visualization to make information accessible and actionable.
@@ -103,17 +109,17 @@ I design and build intelligent data systems — from simple web apps to advanced
 - [Bitcoin Price Prediction with Machine Learning](/blog/bitcoin-price-prediction-ml.html)
 - [Local LLM RAG Chatbot](/blog/llm-rag)  
 - [Loan Default Probability Prediction](/blog/loan-default-prediction)  
-- [Master Data Management Tool](/blog/master-data-management)  
-- [Pharmacy Online](/blog/pharmacy-online)  
-- [Webshop](/blog/webshop)  
-- [Car Dealer Web Application](/blog/car-dealer-web-application)  
-- [Data Import/Export Web Application](/blog/data-import-export-web-application)  
+- [Master Data Management Too (Oracle APEX)l](/blog/master-data-management)  
+- [Pharmacy Online (Oracle APEX)](/blog/pharmacy-online)  
+- [Webshop (Oracle APEX)](/blog/webshop)  
+- [Car Dealer Web Application (Oracle APEX)](/blog/car-dealer-web-application)  
+- [Data Import/Export Web Application (Oracle APEX)](/blog/data-import-export-web-application)  
 - [Oracle XE 10g Size Limit and Datafile Resizing – Solving ORA-03297](/blog/oracle-xe-datafile-resize)  
 - [Custom Error Page in Oracle APEX](/blog/custom-error-page-apex)  
 - [Multiple Star Rating in APEX with jQuery](/blog/multiple-star-rating-apex)  
 - [Wanda the Fish — Fortunes in Oracle APEX](/blog/wanda-the-fish)  
 - [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
-
+- [Oracle APEX Dbat tool](/blog/dba-tool)
 ---
 
 > “From data to deployment — turning ideas into working systems.”
