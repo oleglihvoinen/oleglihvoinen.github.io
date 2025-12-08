@@ -32,7 +32,14 @@ Supports JWT authentication, secure chat sessions, local model inference (llama3
 
 > 🔌 Tech: React, Node.js, Express, MongoDB, Mongoose, Ollama, JWT, Tailwind  
 > 🧠 Focus: AI chat pipelines, secure full-stack architecture, local LLM deployment
+---
 
+### 🛳️ [Titanic Survival Prediction with XGBoost](blog/titanic.html)
+A complete machine learning pipeline that predicts **which passengers survived the Titanic disaster** using the classic Kaggle dataset.  
+The project applies data cleaning, preprocessing, and a high-performance **XGBoost classifier**, achieving 82–86% accuracy and producing a Kaggle-ready submission file.
+
+> 🤖 *Technologies:* Python, Pandas, scikit-learn, XGBoost  
+> 📊 *Focus:* Data preprocessing, gradient boosting, tabular ML modeling  
 
 ---
 ### 🔮 [Bitcoin Price Prediction with Machine Learning](blog/bitcoin-price-prediction-ml.html)
