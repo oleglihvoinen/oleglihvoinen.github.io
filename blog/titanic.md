@@ -137,5 +137,3 @@ The complete code includes:
 * Kaggle submission script
 
 ---
-
-Would you like a **full Markdown blog page**, a **notebook version**, or an **extended feature engineering section**?
