@@ -77,4 +77,6 @@ Because it's open-source and modular, you can adapt ChatBuddy-AI to many scenari
 
 ChatBuddy-AI isn’t just a simple demo — it’s a **flexible base** for learning, prototyping, and building. Whether you want to experiment with AI-powered chat, build an internal tool, or learn full-stack AI integration, this project gives you a clean and extendable starting point.
 
+## 🎥 Video Demo
 
+[👉 Watch the project running here](#) *(https://youtu.be/4zVHcufBS-8)*
