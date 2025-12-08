@@ -17,6 +17,17 @@ This portfolio highlights production-ready AI, LLM, Ollama, and data-driven proj
 ## 🚀 Featured Projects
 
 ---
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](blog/integrationg-ftir-spectroscopy-data-into-erp-workflows.html)
+An end-to-end data engineering project that connects **FTIR chemical spectroscopy** with enterprise **ERP workflows**, enabling automated material verification and quality control.  
+Includes spectral preprocessing, PCA visualization, anomaly detection, PASS/FAIL logic, and seamless integration with an ERP backend through a REST API.
+
+> 📊 *Technologies:* Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI  
+> 🧪 *Focus:* Spectral analysis, quality control automation, Industry 4.0 data pipelines  
+> 🏭 *Outcome:* Automated FTIR evaluation feeding real-time results into ERP batch records
+---
+
+
+---
 ### 🔮 [Bitcoin Price Prediction with Machine Learning](blog/bitcoin-price-prediction-ml.html)
 A comprehensive machine learning system that predicts **Bitcoin price movements** using LSTM neural networks and Random Forest algorithms, evaluated with **multiple time-series metrics**.  
 Includes real-time data fetching, technical indicator engineering, model comparison, and tomorrow's price predictions.
