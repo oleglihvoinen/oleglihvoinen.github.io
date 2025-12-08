@@ -1,7 +1,5 @@
 
-layout: post
-title: "Integrating FTIR Spectroscopy Data into ERP Workflows"
-tags: [ftir, erp, machine-learning, python, data-engineering]
+Integrating FTIR Spectroscopy Data into ERP Workflows
 ---
 
 Modern laboratories and manufacturing environments produce a huge amount of analytical data. Yet, most of this information remains **isolated** inside instruments — never making it into the organization's **ERP (Enterprise Resource Planning)** system, where it could drive quality decisions, traceability, and automation.
