@@ -70,7 +70,7 @@ npm run dev
 Server will run on `http://localhost:5001`.
 
 Client:
-Open a new terminal:
+Open a new terminal
 ```bash
 cd client
 npm install
