@@ -155,7 +155,7 @@ Here is an overlay of the processed spectra:
 
 PCA compresses high-dimensional FTIR data into 2D for visualization:
 
-![FTIR PCA clusters](/assets/images/ftir_erp/ftir_pca_clusters.png)
+![FTIR PCA clusters](/assets/images/ftir_pca_clusters.png)
 
 <small>Figure 3 — PCA projection revealing clusters of similar spectra.</small>
 
