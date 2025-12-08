@@ -323,7 +323,7 @@ The project uses:
 ### Option A — Clone from GitHub
 
 ```bash
-git clone [https://github.com/oleglihvoinen/ftir-erp-project.git]
+git clone https://github.com/oleglihvoinen/ftir-erp-project.git
 cd ftir-erp-project
 ```
 
