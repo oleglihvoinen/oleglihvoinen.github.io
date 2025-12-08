@@ -17,7 +17,7 @@ This portfolio highlights production-ready AI, LLM, Ollama, and data-driven proj
 ## 🚀 Featured Projects
 
 ---
-### 🔬 [FTIR Spectroscopy Integration with ERP Systems](blog/integrationg-ftir-spectroscopy-data-into-erp-workflows.html)
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](blog/integration-ftir-spectroscopy-data-into-erp-workflows.html)
 An end-to-end data engineering project that connects **FTIR chemical spectroscopy** with enterprise **ERP workflows**, enabling automated material verification and quality control.  
 Includes spectral preprocessing, PCA visualization, anomaly detection, PASS/FAIL logic, and seamless integration with an ERP backend through a REST API.
 
