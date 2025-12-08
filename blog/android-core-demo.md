@@ -335,6 +335,6 @@ Move from `ListView` to `RecyclerView` and add data persistence with Room or Sha
 
 ## 🎥 Video Demo
 
-[👉 Watch the project running here](#) *(link)*
+[👉 Watch the project running here](#) *(https://www.youtube.com/shorts/ggFRFLSRJoA)*
 
 
