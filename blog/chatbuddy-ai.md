@@ -55,7 +55,8 @@ Because it's open-source and modular, you can adapt ChatBuddy-AI to many scenari
    ```
 
 3. **Run the backend/chat server**
-   Server:
+
+Server:
  ```bash
 cd server
 npm install
@@ -103,4 +104,4 @@ ChatBuddy-AI isn’t just a simple demo — it’s a **flexible base** for learn
 
 ## 🎥 Video Demo
 
-[👉 Watch the project running here](#) *(https://youtu.be/4zVHcufBS-8)*
+[👉 Watch the project running here] *(https://youtu.be/4zVHcufBS-8)*
