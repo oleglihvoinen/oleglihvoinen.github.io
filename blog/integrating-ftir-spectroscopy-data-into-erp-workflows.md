@@ -278,3 +278,229 @@ If you want to learn more, check out the full project on GitHub or reach out wit
 
 ---
 
+
+# 📦 **FTIR–ERP Pipeline Installation Guide**
+
+This guide explains how to install and run the full **FTIR Spectroscopy → ERP Integration** project, including:
+
+* FTIR preprocessing pipeline
+* PCA visualization
+* PASS/FAIL QC logic
+* ERP mock server
+* Example dataset and plots
+
+---
+
+# ✔️ **1. Requirements**
+
+### Operating System
+
+* Windows, macOS, or Linux
+
+### Python version
+
+```
+Python 3.9 – 3.11 recommended
+```
+
+### Required Python packages
+
+The project uses:
+
+* `numpy`
+* `pandas`
+* `matplotlib`
+* `scipy`
+* `scikit-learn`
+* `fastapi`
+* `uvicorn`
+* `requests`
+
+---
+
+# ✔️ **2. Clone or download the project**
+
+### Option A — Clone from GitHub
+
+```bash
+git clone [https://github.com/oleglihvoinen/ftir-erp-project.git]
+cd ftir-erp-project
+```
+
+### Option B — Download ZIP
+
+Extract into a folder such as:
+
+```
+C:\projects\ftir-erp\
+```
+
+---
+
+# ✔️ **3. Create a Python virtual environment (recommended)**
+
+### Windows (PowerShell)
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+# ✔️ **4. Install dependencies**
+
+If you have a **requirements.txt**, run:
+
+```bash
+pip install -r requirements.txt
+```
+
+If not, install manually:
+
+```bash
+pip install numpy pandas matplotlib scipy scikit-learn fastapi uvicorn requests
+```
+
+---
+
+# ✔️ **5. Check the project folder structure**
+
+Your project should look like:
+
+```
+ftir_erp_project/
+│
+├
+|─ ftir_erp_pipeline.py
+│
+├─ data/
+│   └─ ftir_samples/
+│       reference_material.csv
+│       sample_good.csv
+│       sample_bad.csv
+│       sample_new.csv
+│
+├─ assets/
+│   └─ img/
+│       └─ ftir_erp/
+│           (plots will be generated here)
+│
+└─ erp_mock_server.py
+```
+
+---
+
+# ✔️ **6. Start the ERP mock server**
+
+This will receive QC reports from the pipeline.
+
+```bash
+uvicorn erp_mock_server:app --reload
+```
+
+You should see:
+
+```
+Uvicorn running on http://127.0.0.1:8000
+```
+
+Keep this terminal open while the pipeline runs.
+
+---
+
+# ✔️ **7. Run the FTIR pipeline**
+
+Run:
+
+```bash
+python code/ftir_erp_pipeline.py
+```
+
+The script will:
+
+* Load FTIR spectra
+* Preprocess and normalize them
+* Compare samples to the reference spectrum
+* Generate plots in `assets/img/ftir_erp/`
+* Send QC JSON data to the ERP mock server
+
+Example console output:
+
+```
+Found 4 spectra
+Sample sample_good.csv → PASS
+Sample sample_bad.csv → FAIL
+👍 ERP received FTIR QC report:
+{
+  "sample_name": "sample_good.csv",
+  "rms_error": 0.034,
+  "status": "PASS",
+  "threshold": 0.05
+}
+```
+
+---
+
+# ✔️ **8. View generated plots**
+
+Check your output images:
+
+```
+assets/img/ftir_erp/
+│
+├─ ftir_reference_spectrum.png
+├─ ftir_compare_sample_good.png
+├─ ftir_compare_sample_bad.png
+├─ ftir_compare_sample_new.png
+└─ ftir_pca_clusters.png
+```
+
+
+---
+
+# ✔️ **9. (Optional) Customize ERP endpoint**
+
+In `ftir_erp_pipeline.py` modify:
+
+```python
+ERP_API_URL = "http://127.0.0.1:8000/erp/ftir_report"
+```
+
+This can point to:
+
+* A real ERP system
+* A cloud API
+* A Dockerized microservice
+
+---
+
+# ✔️ **10. Deactivate environment when done**
+
+```bash
+deactivate
+```
+
+---
+
+# 🎉 **Installation Complete**
+
+You now have:
+
+* Working FTIR preprocessing
+* PASS/FAIL QC classification
+* PCA visualization
+* Automatic ERP integration
+* A reproducible and extendable Industry 4.0 pipeline
+
+---
+
+
+
