@@ -55,7 +55,31 @@ Because it's open-source and modular, you can adapt ChatBuddy-AI to many scenari
    ```
 
 3. **Run the backend/chat server**
-   (Depending on setup — e.g. `python app.py` or similar command.)
+   Server:
+ ```bash
+cd server
+npm install
+# .env example:
+# PORT=5001
+# MONGO_URI=mongodb://localhost:27017/chatbuddy
+# JWT_SECRET=supersecret
+# OLLAMA_BASE_URL=http://localhost:11434
+npm run dev
+```
+Server will run on `http://localhost:5001`.
+
+Client:
+Open a new terminal:
+```bash
+cd client
+npm install
+npm run dev
+```
+Client will run on `http://localhost:5173` (Vite default).
+
+> Ensure **Ollama** is running (`ollama serve`) and that you've pulled your chosen model, e.g. `ollama pull llama3`.
+
+---
 
 4. **Open the web frontend** in your browser — start chatting!
 
