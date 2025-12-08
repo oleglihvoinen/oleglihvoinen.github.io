@@ -137,3 +137,4 @@ The complete code includes:
 * Kaggle submission script
 
 ---
+[The code](https://github.com/oleglihvoinen/titanic.git)
