@@ -57,7 +57,42 @@ By integrating FTIR→ERP, organizations can:
 
 Below is the data flow I implemented for this project:
 
-![FTIR to ERP flow diagram](/assets/img/ftir_erp/ftir_erp_flow.png)
+                ┌────────────────────────┐
+                │     FTIR Instrument    │
+                │ (raw spectra .csv/.spa)│
+                └───────────┬────────────┘
+                            │
+                            ▼
+                ┌────────────────────────┐
+                │   Python ETL Pipeline  │
+                │ - Load spectra         │
+                │ - Preprocess (SG, BC)  │
+                │ - Feature extraction   │
+                └───────────┬────────────┘
+                            │
+                            ▼
+                ┌────────────────────────┐
+                │  Classification Engine │
+                │ - RMS similarity       │
+                │ - SVM classifier       │
+                │ - Decision logic       │
+                └───────────┬────────────┘
+                            │ JSON payload
+                            ▼
+                ┌────────────────────────┐
+                │ ERP Integration Layer  │
+                │ POST /erp/ftir_report  │
+                │ Batch record update    │
+                └───────────┬────────────┘
+                            │
+                            ▼
+                ┌────────────────────────┐
+                │  ERP System Dashboard  │
+                │ - QC reports           │
+                │ - Material traceability│
+                │ - Alerts / workflows   │
+                └────────────────────────┘
+
 
 <small>Figure 1 — FTIR data pipeline from instrument to ERP backend.</small>
 
