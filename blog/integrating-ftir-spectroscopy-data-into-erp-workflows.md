@@ -145,7 +145,7 @@ def advanced_preprocess(y):
 
 Here is an overlay of the processed spectra:
 
-![FTIR spectrum comparison](/assets/img/ftir_erp/ftir_spectrum_comparison.png)
+![FTIR spectrum comparison](/assets/images/ftir_compare_sample_bad.png)
 
 <small>Figure 2 — Normalized FTIR spectra for reference and samples.</small>
 
@@ -155,7 +155,7 @@ Here is an overlay of the processed spectra:
 
 PCA compresses high-dimensional FTIR data into 2D for visualization:
 
-![FTIR PCA clusters](/assets/img/ftir_erp/ftir_pca_clusters.png)
+![FTIR PCA clusters](/assets/images/ftir_erp/ftir_pca_clusters.png)
 
 <small>Figure 3 — PCA projection revealing clusters of similar spectra.</small>
 
@@ -264,7 +264,7 @@ Planned extensions include:
 # 📎 Project Files
 
 * **Notebook:** `ftir.ipynb`
-* **Python pipeline:** `code/ftir_erp_pipeline.py`
+* **Python pipeline:** `ftir_erp_pipeline.py`
 * **Mock ERP server:** `erp_mock_server.py`
 * **Sample FTIR data:** `data/ftir_samples/`
 
