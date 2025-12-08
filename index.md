@@ -26,6 +26,13 @@ Includes spectral preprocessing, PCA visualization, anomaly detection, PASS/FAIL
 > 🏭 *Outcome:* Automated FTIR evaluation feeding real-time results into ERP batch records
 ---
 
+### 🤖 [ChatBuddy-AI](blog/chatbuddy-ai.html)
+A full-stack AI chatbot built with **React + Vite**, **Node.js**, **MongoDB**, and **Ollama local LLMs**.  
+Supports JWT authentication, secure chat sessions, local model inference (llama3, mistral, phi3), and a clean modern UI with Tailwind CSS.
+
+> 🔌 Tech: React, Node.js, Express, MongoDB, Mongoose, Ollama, JWT, Tailwind  
+> 🧠 Focus: AI chat pipelines, secure full-stack architecture, local LLM deployment
+
 
 ---
 ### 🔮 [Bitcoin Price Prediction with Machine Learning](blog/bitcoin-price-prediction-ml.html)
