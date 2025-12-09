@@ -26,6 +26,15 @@ Includes spectral preprocessing, PCA visualization, anomaly detection, PASS/FAIL
 > 🏭 *Outcome:* Automated FTIR evaluation feeding real-time results into ERP batch records
 ---
 
+### 💳 [Credit Card Fraud Detection with XGBoost](blog/fraud.html)
+A full machine learning workflow for identifying **fraudulent credit card transactions** in a highly imbalanced real-world dataset.  
+Includes feature scaling, imbalance handling, XGBoost modeling, precision/recall evaluation, and ROC-AUC analysis to build a robust fraud-scoring system.
+
+> 🤖 *Technologies:* Python, Pandas, scikit-learn, XGBoost  
+> 📉 *Focus:* Imbalanced classification, anomaly detection, financial risk modeling  
+> 🏦 *Outcome:* A high-performance fraud prediction model suitable for deployment in banking and fintech environments
+---
+
 ### 🤖 [ChatBuddy-AI](blog/chatbuddy-ai.html)
 A full-stack AI chatbot built with **React + Vite**, **Node.js**, **MongoDB**, and **Ollama local LLMs**.  
 Supports JWT authentication, secure chat sessions, local model inference (llama3, mistral, phi3), and a clean modern UI with Tailwind CSS.
