@@ -1,161 +1,109 @@
 ---
 layout: default
-title: "AI & Web Applications Portfolio – Oleg Lihvoinen"
-description: "A showcase of AI, data, and web applications built with Oracle APEX, Python, and modern web technologies."
+title: "Oleg Lihvoinen | Senior Data Engineer, Data & AI Builder"
+description: "Senior data engineer with decades of Microsoft and Oracle experience. Enterprise data, MDM, AI, and web, mobile and SaaS applications."
 permalink: /
 ---
 
-# 👋 Welcome
+# Oleg Lihvoinen
 
-Hi — I’m **Oleg Lihvoinen**, a developer and data specialist focused on building practical AI, data, and web applications.  
-This portfolio highlights production-ready AI, LLM, Ollama, and data-driven projects — complete web applications for healthcare, retail, and enterprise data management.
+## Senior Data Engineer | Enterprise Data, AI & Applications
 
-[Explore my code and projects on GitHub](https://github.com/oleglihvoinen?tab=repositories)
+I have worked with **Microsoft and Oracle data technologies for decades**, designing data solutions, improving data quality and building tools that turn complex information into useful services. My work spans **data engineering, master data management (MDM), analytics and AI**, as well as **web, mobile and SaaS applications**.
 
----
+I bring an enterprise data perspective to product development: defining reliable data structures and business rules, integrating systems, and making the results usable for people. Explore the selected projects below, or [view my code and projects on GitHub](https://github.com/oleglihvoinen?tab=repositories).
 
-## 🚀 Featured Projects
-
----
-### 🔬 [FTIR Spectroscopy Integration with ERP Systems](blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-An end-to-end data engineering project that connects **FTIR chemical spectroscopy** with enterprise **ERP workflows**, enabling automated material verification and quality control.  
-Includes spectral preprocessing, PCA visualization, anomaly detection, PASS/FAIL logic, and seamless integration with an ERP backend through a REST API.
-
-> 📊 *Technologies:* Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI  
-> 🧪 *Focus:* Spectral analysis, quality control automation, Industry 4.0 data pipelines  
-> 🏭 *Outcome:* Automated FTIR evaluation feeding real-time results into ERP batch records
----
-
-### 💳 [Credit Card Fraud Detection with XGBoost](blog/fraud.html)
-A full machine learning workflow for identifying **fraudulent credit card transactions** in a highly imbalanced real-world dataset.  
-Includes feature scaling, imbalance handling, XGBoost modeling, precision/recall evaluation, and ROC-AUC analysis to build a robust fraud-scoring system.
-
-> 🤖 *Technologies:* Python, Pandas, scikit-learn, XGBoost  
-> 📉 *Focus:* Imbalanced classification, anomaly detection, financial risk modeling  
-> 🏦 *Outcome:* A high-performance fraud prediction model suitable for deployment in banking and fintech environments
----
-
-### 🤖 [ChatBuddy-AI](blog/chatbuddy-ai.html)
-A full-stack AI chatbot built with **React + Vite**, **Node.js**, **MongoDB**, and **Ollama local LLMs**.  
-Supports JWT authentication, secure chat sessions, local model inference (llama3, mistral, phi3), and a clean modern UI with Tailwind CSS.
-
-> 🔌 Tech: React, Node.js, Express, MongoDB, Mongoose, Ollama, JWT, Tailwind  
-> 🧠 Focus: AI chat pipelines, secure full-stack architecture, local LLM deployment
----
-
-### 🛳️ [Titanic Survival Prediction with XGBoost](blog/titanic.html)
-A complete machine learning pipeline that predicts **which passengers survived the Titanic disaster** using the classic Kaggle dataset.  
-The project applies data cleaning, preprocessing, and a high-performance **XGBoost classifier**, achieving 82–86% accuracy and producing a Kaggle-ready submission file.
-
-> 🤖 *Technologies:* Python, Pandas, scikit-learn, XGBoost  
-> 📊 *Focus:* Data preprocessing, gradient boosting, tabular ML modeling  
-
----
-### 🔮 [Bitcoin Price Prediction with Machine Learning](blog/bitcoin-price-prediction-ml.html)
-A comprehensive machine learning system that predicts **Bitcoin price movements** using LSTM neural networks and Random Forest algorithms, evaluated with **multiple time-series metrics**.  
-Includes real-time data fetching, technical indicator engineering, model comparison, and tomorrow's price predictions.
-
-> 📊 *Technologies:* Python, TensorFlow, scikit-learn, LSTM, Random Forest, TA-Lib  
-> 🧠 *Focus:* Time series forecasting, cryptocurrency markets, and financial ML
----
-
-### 💬 Local LLM RAG Chatbot
-A **Retrieval-Augmented Generation (RAG)** chatbot powered by **Ollama**, **ChromaDB**, and **FastAPI** —  
-with an optional **Streamlit UI** for interactive chat.
-
-Runs fully **offline** using local LLMs (like `llama3`) or connects to **OpenAI** when available.  
-Easily extendable for your own data or enterprise use.
-
-👉 [**Read full post →**](blog/llm-rag.md)
+**Based in Järvenpää, Finland** · [Contact me](mailto:lihvoinenoleg@gmail.com)
 
 ---
 
-### 💰 [Loan Default Probability Prediction](https://oleglihvoinen.github.io/blog/loan-default-prediction.html)
-A machine learning model that predicts the **probability of loan repayment**, evaluated with **ROC-AUC**.  
-Includes data preprocessing, feature encoding, model training, and submission generation.
+## Selected Work
 
-> 📊 *Technologies:* Python, scikit-learn, pandas, Gradient Boosting, AUC  
-> 🧠 *Focus:* Credit risk modeling and probabilistic classification
+### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](https://haesiivooja.fi/)
+A Finnish **SaaS marketplace** connecting customers and cleaning professionals through a digital service. Customers can discover cleaners, view pricing and arrange bookings; cleaners can create profiles, set availability and prices, and receive work opportunities. The platform includes a web presence and **Android and iOS mobile apps developed with Kotlin and Swift**.
 
----
+[Visit HaeSiivooja](https://haesiivooja.fi/)
 
-### 🧭 Master Data Management Tool
-A browser-based Master Data Management (MDM) solution built with Oracle APEX.  
-Features CSV import/export, business-rules management and validation runs, validation-error dashboards, and data management operations (insert/update/delete) for cleansing and harmonisation.  
-🔗 [See details and demo](/blog/master-data-management)
+### 🧭 [Master Data Management Tool](/blog/master-data-management)
+A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing and harmonisation.
+
+**Technologies:** Oracle APEX, Oracle Database, PL/SQL.  
+[Explore the tool and demo](/blog/master-data-management)
+
+### 🛠️ [Oracle DBA Tool](/blog/dba-tool)
+An Oracle APEX application for database administration, bringing together session monitoring, performance analysis, schema exploration, health checks and user management in one interface.
+
+**Technologies:** Oracle APEX, Oracle Database, PL/SQL.  
+[Read the case study](/blog/dba-tool) · [Download the package](https://github.com/oleglihvoinen/oracle-apex_applications/blob/master/dba_tool.zip)
+
+### 💾 [Data Import/Export Web Application](/blog/data-import-export-web-application)
+A browser-based utility for moving CSV and XML data into and out of Oracle databases, supporting data cleansing, harmonisation and migration tasks.
+
+**Technologies:** Oracle APEX, Oracle Database.  
+[See details and demo](/blog/data-import-export-web-application)
 
 ---
 
 ### 💊 [Pharmacy Online](/blog/pharmacy-online)
-A web database connecting pharmacies, doctors, surgeries, and patients across the U.K.  
-Real-time analytics, prescription tracking, automated reporting.  
-🎥 [Watch the demo](https://www.youtube.com/watch?v=p366Onv_HGU)
+An Oracle APEX web database connecting pharmacies, doctors, surgeries and patients. It brings prescription tracking, operational data and reporting together in one application.
 
----
+[Watch the demo](https://www.youtube.com/watch?v=p366Onv_HGU)
 
 ### 🛍️ [Webshop](/blog/webshop)
-A dual-interface e-commerce solution built with Oracle APEX (Admin + Front-End).  
-Supports product/catalog management, order processing, and responsive UI.  
-📦 [Download package](https://github.com/oleglihvoinen/oracle-apex_applications/blob/master/webshop_v01.zip)
+An Oracle APEX e-commerce application with separate customer-facing and administration interfaces. It supports product and catalogue management, customer orders and order processing within a shared database-backed system.
 
----
+[Explore the application](/blog/webshop) · [Download the package](https://github.com/oleglihvoinen/oracle-apex_applications/blob/master/webshop_v01.zip)
 
 ### 📝 [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
-A fully customizable blog application with a front-end Blog Reader and an admin Back‑Office (Blog Admin).  
-Features article management, comments, file uploads, visitor stats and a usage dashboard.  
-⤓ [Download from SourceForge](https://sourceforge.net/projects/blogging-platform/)
+A web publishing application with a public blog reader and a separate administration interface. It provides article and comment management, file uploads, visitor statistics and a usage dashboard.
 
----
+[Explore the platform](/blog/oracle-apex-blogging-platform) · [Download from SourceForge](https://sourceforge.net/projects/blogging-platform/)
 
 ### 🚗 [Car Dealer Web Application](/blog/car-dealer-web-application)
-Full‑stack app for listing and selling cars.  
-Image support, technical specifications, and flexible search filters.  
-🎥 [Watch demo](/blog/car-dealer-web-application)
+A database-backed vehicle marketplace built with Oracle APEX. Registered users can create and manage listings with technical specifications and multiple photos. Buyers can search by make, model, year, price and mileage. The application also supports a single-dealer setup for managing a business's own vehicle inventory, with a data model and reusable listing structure that can be adapted to other marketplaces.
+
+**Technologies:** Oracle APEX, Oracle Database, HTML, CSS and JavaScript.  
+[Explore the application and watch the demo](/blog/car-dealer-web-application)
+
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
+A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
+
+**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
+[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ---
 
-### 💾 [Data Import/Export Web Application](/blog/data-import-export-web-application)
-Browser-based tool for importing/exporting CSV and XML to/from Oracle databases.  
-Useful for data quality, harmonization, and migrations — works with Oracle XE.  
-🎥 [Watch demo](/blog/data-import-export-web-application)
+## AI & Machine Learning Projects
+
+These projects explore how data pipelines, predictive models and language models can be applied to practical problems.
+
+- **[Local LLM RAG Chatbot](/blog/llm-rag):** Retrieval-augmented chat using Ollama, ChromaDB and FastAPI, with an optional Streamlit interface and support for local models or OpenAI.
+- **[ChatBuddy-AI](/blog/chatbuddy-ai.html):** A full-stack chatbot using React, Node.js, MongoDB and local Ollama models, with authentication and chat sessions.
+- **[Credit Card Fraud Detection](/blog/fraud.html):** XGBoost classification for imbalanced transaction data, evaluated with precision, recall and ROC-AUC.
+- **[Loan Default Probability Prediction](/blog/loan-default-prediction.html):** A credit-risk modeling workflow with preprocessing, feature encoding and ROC-AUC evaluation.
+- **[Bitcoin Price Prediction](/blog/bitcoin-price-prediction-ml.html):** Time-series experiments using LSTM and Random Forest models with technical indicators.
+- **[Titanic Survival Prediction](/blog/titanic.html):** A Kaggle-based XGBoost exercise in cleaning, preprocessing and tabular classification.
 
 ---
 
-### [How I Built a Powerful DBA Tool with Oracle APEX](/blog/dba-tool) 
-  A deep dive into how I designed and developed my own DBA tool using Oracle APEX, featuring session monitoring, performance analytics, schema exploration, health checks, and secure user management.  
-  _[Read more →](blog/dba-tool.md)_
-  📦 [Download package](https://github.com/oleglihvoinen/oracle-apex_applications/blob/master/dba_tool.zip)
+## About Me
+
+My background combines decades of work with **Microsoft and Oracle platforms** and hands-on development across data, analytics and applications. I work with **Oracle Database, Microsoft SQL Server, Snowflake and other database technologies**, choosing the right data platform for each problem. My broader toolkit includes **Microsoft Fabric, Azure, Google Cloud, AWS, dbt, DevOps and CI/CD**, alongside SQL, T-SQL, PL/SQL, Python, data quality and MDM, Oracle APEX, APIs and AI-assisted applications. I also build products that bring data into customer-facing web and mobile experiences.
+
+I am interested in **Senior Data Engineer, MDM and data architecture roles**, as well as opportunities to build data-driven AI and SaaS products.
+
+[GitHub](https://github.com/oleglihvoinen?tab=repositories) · [Email me](mailto:lihvoinenoleg@gmail.com)
 
 ---
 
-## 🧠 About Me
+## Writing & Technical Notes
 
-I design and build intelligent data systems — from simple web apps to advanced AI tools integrating LLMs and analytics. I combine data architecture, automation, and visualization to make information accessible and actionable.
-
-- Areas: Data Engineering, AI Systems, Oracle APEX, Web Development  
-- Tools: Python, MS SQL, ChromaDB, Streamlit, Ollama, OpenAI, FastAPI, Oracle APEX, PL/SQL, Azure, MLflow, LangChain  
-- Location: Järvenpää, Finland  
-- Contact: [lihvoinenoleg@gmail.com](mailto:lihvoinenoleg@gmail.com)
-
----
-
-## 📝 Blog (all posts)
-
-- [Bitcoin Price Prediction with Machine Learning](/blog/bitcoin-price-prediction-ml.html)
-- [Local LLM RAG Chatbot](/blog/llm-rag)  
-- [Loan Default Probability Prediction](/blog/loan-default-prediction)  
-- [Master Data Management Tool (Oracle APEX)](/blog/master-data-management)  
-- [Pharmacy Online (Oracle APEX)](/blog/pharmacy-online)  
-- [Webshop (Oracle APEX)](/blog/webshop)  
-- [Car Dealer Web Application (Oracle APEX)](/blog/car-dealer-web-application)  
-- [Data Import/Export Web Application (Oracle APEX)](/blog/data-import-export-web-application)  
-- [Oracle XE 10g Size Limit and Datafile Resizing – Solving ORA-03297](/blog/oracle-xe-datafile-resize)  
-- [Custom Error Page in Oracle APEX](/blog/custom-error-page-apex)  
-- [Multiple Star Rating in APEX with jQuery](/blog/multiple-star-rating-apex)  
-- [Wanda the Fish — Fortunes in Oracle APEX](/blog/wanda-the-fish)  
+- [Master Data Management Tool](/blog/master-data-management)
+- [Oracle DBA Tool](/blog/dba-tool)
+- [Oracle XE 10g Size Limit and Datafile Resizing](/blog/oracle-xe-datafile-resize)
+- [Custom Error Page in Oracle APEX](/blog/custom-error-page-apex)
+- [Multiple Star Rating in APEX with jQuery](/blog/multiple-star-rating-apex)
+- [Wanda the Fish — Fortunes in Oracle APEX](/blog/wanda-the-fish)
 - [Oracle APEX Blogging Platform](/blog/oracle-apex-blogging-platform)
-- [How I Built a Powerful DBA Tool with Oracle APEX](/blog/dba-tool)
 
----
-
-> “From data to deployment — turning ideas into working systems.”
+> From enterprise data to usable applications.
