@@ -174,7 +174,7 @@ Each row corresponds to **one player in one future frame**.
 ## 🏆 Conclusion
 
 The **Big Data Bowl 2026 Prediction Competition** combines **sports analytics**, **trajectory forecasting**, and **multi-agent modeling** in a real-world context.  
-The challenge pushes participants to blend **physics, machine learning, and game understanding** to simulate realistic player movements.
+The challenge pushes participants to blend **physics, ML, and game understanding** to simulate realistic player movements.
 
 > "When the ball is in the air, anything can happen — touchdowns, interceptions, or brilliance in motion. Our job is to predict that motion."
 
@@ -185,7 +185,7 @@ The challenge pushes participants to blend **physics, machine learning, and game
 ---
 
 **Author:** Oleg Lihvoinen  
-**Tags:** `AI`, `Sports Analytics`, `Machine Learning`, `Trajectory Forecasting`, `NFL Big Data Bowl`
+**Tags:** `AI`, `Sports Analytics`, `ML`, `Trajectory Forecasting`, `NFL Big Data Bowl`
 ```
 
 ---
