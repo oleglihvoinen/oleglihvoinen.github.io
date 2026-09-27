@@ -1,13 +1,13 @@
 
 
 
-# Building a Bitcoin Price Prediction System with Machine Learning
+# Building a Bitcoin Price Prediction System with ML
 
 *How I built a complete Bitcoin price prediction system using Python, LSTM networks, and Random Forest algorithms*
 
 ## Introduction
 
-Bitcoin's volatile nature makes it both challenging and fascinating for price prediction. While perfect forecasting is impossible due to market efficiency and external factors, machine learning can identify patterns and trends that help with short-term predictions. In this project, I built a complete system that predicts Bitcoin prices using historical data and technical indicators.
+Bitcoin's volatile nature makes it both challenging and fascinating for price prediction. While perfect forecasting is impossible due to market efficiency and external factors, ML can identify patterns and trends that help with short-term predictions. In this project, I built a complete system that predicts Bitcoin prices using historical data and technical indicators.
 
 > **Disclaimer**: This project is for educational purposes only. Cryptocurrency investments carry significant risk, and past performance doesn't guarantee future results.
 
@@ -16,7 +16,7 @@ Bitcoin's volatile nature makes it both challenging and fascinating for price pr
 The goal was to create a robust system that:
 - Fetches real Bitcoin price data
 - Engineers meaningful technical indicators
-- Implements multiple machine learning models
+- Implements multiple ML models
 - Provides tomorrow's price predictions
 - Evaluates model performance comprehensively
 
@@ -100,7 +100,7 @@ def add_technical_indicators(self, df):
     return df
 ```
 
-## Machine Learning Models
+## ML Models
 
 ### 1. Random Forest Regressor
 
@@ -308,7 +308,7 @@ python quick_predict.py
 
 ## Conclusion
 
-This project demonstrates that while predicting Bitcoin prices remains challenging, machine learning can capture meaningful patterns in cryptocurrency markets. The LSTM model showed slightly better performance than Random Forest, likely due to its ability to model temporal dependencies.
+This project demonstrates that while predicting Bitcoin prices remains challenging, ML can capture meaningful patterns in cryptocurrency markets. The LSTM model showed slightly better performance than Random Forest, likely due to its ability to model temporal dependencies.
 
 The complete system provides:
 - ✅ Robust data pipeline with fallback mechanisms
@@ -330,7 +330,7 @@ The complete source code is available on [GitHub](https://github.com/oleglihvoin
 1. [CoinGecko API Documentation](https://www.coingecko.com/en/api)
 2. [TA Technical Analysis Library](https://github.com/bukosabino/ta)
 3. [TensorFlow Time Series Guide](https://www.tensorflow.org/tutorials/structured_data/time_series)
-4. [Machine Learning for Trading](https://www.oreilly.com/library/view/machine-learning-for/9781492085249/)
+4. [ML for Trading](https://www.oreilly.com/library/view/machine-learning-for/9781492085249/)
 
 ---
 
