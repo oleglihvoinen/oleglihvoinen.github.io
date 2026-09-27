@@ -9,27 +9,35 @@ permalink: /blog/semantic-ai-data-agent
 
 ![Governed Semantic AI Data Agent architecture](/assets/architecture/semantic-ai-data-agent.png)
 
-## Goal
+## Executive summary
 
-This project demonstrates a governed pattern for analytical AI. Instead of giving a language model unrestricted access to warehouse tables, an **approved semantic layer** defines which business metrics and dimensions exist, how they are calculated, who owns them and which combinations are allowed.
+This architecture creates a controlled semantic boundary between natural-language analytics and physical data models. Instead of giving an LLM unrestricted access to warehouse tables, the platform exposes approved metrics, dimensions, ownership and provenance through a typed API.
 
-The semantic API becomes the contract between natural-language/agent experiences and physical data platforms such as Snowflake/dbt or Microsoft Fabric.
+The model can interpret intent and invoke tools, but the semantic layer remains authoritative for metric meaning and permitted analytical combinations.
 
 ## Semantic contracts
 
-Metrics are stored in machine-readable YAML. The current examples define **Net Revenue** and **Active Customers**, including description, aggregation, expression, time dimension, allowed dimensions and business owner. This makes a metric more than a column name: it becomes an explicit governed business concept.
+Metrics are defined in machine-readable YAML. Each contract includes business description, aggregation logic, expression, time dimension, allowed dimensions and business owner.
+
+The current contracts include **Net Revenue** and **Active Customers**, showing how a metric becomes a governed business object rather than an informal column name or prompt convention.
 
 ## API and governance boundary
 
-A FastAPI service exposes the approved metric catalogue and a query-plan endpoint. Requests are validated against the semantic contract; an unapproved metric or dimension is rejected before it reaches a warehouse execution layer. Responses include provenance back to the semantic specification.
+A FastAPI service exposes the metric catalogue and a query-plan endpoint. Requests are validated before reaching any warehouse execution layer.
 
-That pattern is important for AI systems because the model is not treated as the authority on metric definitions. The model can interpret user intent and call tools, but the semantic/governance layer decides what is valid.
+Unknown metrics are rejected. Dimensions not approved for a metric are rejected. Approved query plans return provenance and ownership alongside the semantic expression.
 
-## Trust and production evolution
+This creates an explicit trust boundary between an AI agent and analytical data assets.
 
-The current repository focuses on the **contract and validation boundary**. A production implementation would add identity-aware RBAC, row-level security, Snowflake/Fabric adapters, query compilation, ambiguity handling, LLM tool calling, caching, audit logs, observability and golden-question evaluation sets.
+## Enterprise controls
 
-This architecture also creates a practical place to manage provenance and escalation: if the user's question cannot be mapped confidently to an approved metric, the agent can ask for clarification instead of silently inventing business logic.
+A production implementation would add identity-aware RBAC, row-level security, Snowflake/Fabric adapters, governed query compilation, ambiguity resolution, LLM tool calling, caching, audit logging, observability and golden-question evaluation.
+
+The same boundary also provides an escalation path: when intent cannot be mapped confidently to an approved metric, the agent can request clarification rather than inventing business logic.
+
+## Repository scope
+
+The implementation focuses on semantic contracts, API governance and query-plan validation. Warehouse execution is intentionally separated so the semantic boundary remains stable across Snowflake/dbt and Microsoft Fabric backends.
 
 **Technologies:** Python · FastAPI · REST · Pydantic · YAML semantic contracts · Snowflake/dbt-ready metrics · Microsoft Fabric-ready semantics · LLM grounding · provenance · governance · Docker · CI.
 
