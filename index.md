@@ -107,6 +107,14 @@ A data engineering project connecting chemical spectroscopy analysis to ERP work
 
 ## AI & Machine Learning Projects
 
+These projects explore practical AI application patterns including **RAG, embeddings, persistent memory, grounded web search, prompt-injection defenses, structured extraction, Pydantic validation, OpenAI/Anthropic APIs and Streamlit**.
+
+- **[Product Lens — Product Page Extractor & AI Rewriter](https://github.com/hamk-ai-expert-2026/product_scrapper_oleglihvoinen):** A Streamlit application that extracts structured product data from public e-commerce pages using JSON-LD and HTML metadata fallbacks, validates the result with Pydantic, and optionally rewrites the extracted description with OpenAI. The implementation includes bounded downloads, URL/network protections, missing-field handling and explicit prompt-injection defenses for untrusted webpage content. **Technologies:** Python, Streamlit, Requests, Beautiful Soup, Pydantic, OpenAI Responses API.
+
+- **[Current News Search & Summary](https://github.com/hamk-ai-expert-2026/news_search_app_oleglihvoinen):** A retrieval-and-summarization application that searches current web results through Tavily and sends only retrieved snippets to Claude for grounded summarization. The UI separates model interpretation, retrieved facts and source links, and includes result/session limits plus graceful handling of search or model failures. **Technologies:** Python, Streamlit, Tavily Search API, Anthropic Claude, grounded retrieval, source attribution.
+
+- **[MemoryRAG Assistant](https://github.com/hamk-ai-expert-2026/rag_memory_assistant_oleglihvoinen):** A local RAG assistant combining persistent user preferences with document retrieval. Documents are chunked, embedded with OpenAI embeddings and stored in SQLite; cosine similarity retrieves relevant chunks, which are shown to the user before the grounded answer is generated. The assistant is explicitly constrained to retrieved content and treats documents as untrusted data. **Technologies:** Python, Streamlit, OpenAI, embeddings, SQLite, cosine similarity, RAG, persistent memory.
+
 These projects explore how data pipelines, predictive models and language models can be applied to practical problems.
 
 - **[Local LLM RAG Chatbot](/blog/llm-rag):** Retrieval-augmented chat using Ollama, ChromaDB and FastAPI, with an optional Streamlit interface and support for local models or OpenAI.
