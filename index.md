@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Oleg Lihvoinen | Senior Data Engineer, Data & AI Builder"
-description: "Senior data engineer with decades of Microsoft and Oracle experience. Enterprise data, MDM, AI, and web, mobile and SaaS applications."
+title: "Oleg Lihvoinen | Senior Data Engineer · Data Architecture · AI Platforms"
+description: "Senior Data Engineer with 15+ years across enterprise data, MDM, analytics, cloud data platforms and AI-enabled applications."
 permalink: /
 ---
 
@@ -9,9 +9,9 @@ permalink: /
 
 ## Senior Data Engineer | Enterprise Data, AI & Applications
 
-I have worked with **Microsoft and Oracle data technologies for decades**, designing data solutions, improving data quality and building tools that turn complex information into useful services. My work spans **data engineering, master data management (MDM), analytics and AI**, as well as **web, mobile and SaaS applications**.
+I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines established Microsoft and Oracle platforms with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services.
 
-I bring an enterprise data perspective to product development: defining reliable data structures and business rules, integrating systems, and making the results usable for people. Explore the selected projects below, or [view my code and projects on GitHub](https://github.com/oleglihvoinen?tab=repositories).
+I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. The portfolio below covers enterprise MDM, database applications, C/Linux systems engineering, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products and governed AI. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
 
 **Based in Järvenpää, Finland** · [Contact me](mailto:lihvoinenoleg@gmail.com)
 
@@ -71,7 +71,7 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 ## C & Linux Systems Engineering
 
-These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is a focused reference implementation with build automation and a clear path toward production hardening.
+These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is implemented with source code, build automation and explicit operational considerations.
 
 ### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
 A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
@@ -89,7 +89,7 @@ A native **librdkafka** producer for versioned industrial telemetry. Machine ID 
 A compact storage-engine implementation exposing the mechanics beneath relational databases: fixed binary record layout, append persistence, duplicate-ID checks, sequential lookup, logical deletion and file-position updates. The design intentionally stays readable before evolving toward pages, indexes and write-ahead logging.
 
 **Technologies:** C, Linux, binary files, persistence, storage-engine concepts, Make, GitHub Actions.  
-[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engin)
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engine)
 
 ---
 
@@ -130,13 +130,13 @@ A data engineering project connecting chemical spectroscopy analysis to ERP work
 ---
 
 ### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
-A reference enterprise **medallion/lakehouse platform** showing how ERP, CRM, APIs and files can move through Data Factory into OneLake/Lakehouse Bronze, then through PySpark/Delta standardization and data-quality processing into Silver and governed Gold models. A semantic-consumption boundary is designed for Power BI, APIs and governed AI.
+An enterprise **medallion/lakehouse platform** showing how ERP, CRM, APIs and files move through Data Factory into OneLake/Lakehouse Bronze, then through PySpark/Delta standardization and data-quality processing into Silver and governed Gold models. A semantic-consumption boundary is designed for Power BI, APIs and governed AI.
 
 **Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, Power BI, semantic models, data quality, CI/CD.  
 [Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
 
 ### 🔄 [CDC with Debezium, Kafka & Snowflake](/blog/cdc-kafka-snowflake)
-An end-to-end CDC reference architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**. The repository includes a runnable local PostgreSQL/Kafka/Debezium environment, sample operational tables, a connector definition, a Snowflake raw-event model retaining Kafka lineage metadata, and dbt models for typed staging and incremental current-state analytics.
+An end-to-end CDC architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**. The repository includes a runnable local PostgreSQL/Kafka/Debezium environment, sample operational tables, a connector definition, a Snowflake raw-event model retaining Kafka lineage metadata, and dbt models for typed staging and incremental current-state analytics.
 
 **Technologies:** PostgreSQL, WAL, Debezium, Apache Kafka, Docker Compose, Snowflake, dbt, SQL, CDC, incremental ELT.  
 [Read the case study](/blog/cdc-kafka-snowflake) · [View source on GitHub](https://github.com/oleglihvoinen/cdc-kafka-snowflake-pipeline)
@@ -147,7 +147,7 @@ A governed analytical-AI pattern that places **approved metric and dimension con
 **Technologies:** Python, FastAPI, REST, Pydantic, YAML semantic contracts, Snowflake/dbt-ready metrics, Microsoft Fabric-ready semantics, LLM grounding, provenance, governance, Docker, CI.  
 [Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
 
-## AI & Machine Learning Projects
+## AI & ML Projects
 
 These projects explore practical AI application patterns including **RAG, embeddings, persistent memory, grounded web search, prompt-injection defenses, structured extraction, Pydantic validation, OpenAI/Anthropic APIs and Streamlit**.
 
@@ -157,14 +157,14 @@ These projects explore practical AI application patterns including **RAG, embedd
 
 - **[MemoryRAG Assistant](https://github.com/hamk-ai-expert-2026/rag_memory_assistant_oleglihvoinen):** A local RAG assistant combining persistent user preferences with document retrieval. Documents are chunked, embedded with OpenAI embeddings and stored in SQLite; cosine similarity retrieves relevant chunks, which are shown to the user before the grounded answer is generated. The assistant is explicitly constrained to retrieved content and treats documents as untrusted data. **Technologies:** Python, Streamlit, OpenAI, embeddings, SQLite, cosine similarity, RAG, persistent memory.
 
-These projects explore how data pipelines, predictive models and language models can be applied to practical problems.
+These projects apply retrieval, predictive modeling and language-model integration to concrete data and application scenarios.
 
 - **[Local LLM RAG Chatbot](/blog/llm-rag):** Retrieval-augmented chat using Ollama, ChromaDB and FastAPI, with an optional Streamlit interface and support for local models or OpenAI.
 - **[ChatBuddy-AI](/blog/chatbuddy-ai.html):** A full-stack chatbot using React, Node.js, MongoDB and local Ollama models, with authentication and chat sessions.
 - **[Credit Card Fraud Detection](/blog/fraud.html):** XGBoost classification for imbalanced transaction data, evaluated with precision, recall and ROC-AUC.
 - **[Loan Default Probability Prediction](/blog/loan-default-prediction.html):** A credit-risk modeling workflow with preprocessing, feature encoding and ROC-AUC evaluation.
 - **[Bitcoin Price Prediction](/blog/bitcoin-price-prediction-ml.html):** Time-series experiments using LSTM and Random Forest models with technical indicators.
-- **[Titanic Survival Prediction](/blog/titanic.html):** A Kaggle-based XGBoost exercise in cleaning, preprocessing and tabular classification.
+- **[Titanic Survival Prediction](/blog/titanic.html):** A Kaggle-based XGBoost project covering data cleaning, preprocessing, feature engineering and tabular classification.
 
 ---
 
