@@ -71,17 +71,31 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 ## C & Linux Systems Engineering
 
-These reference implementations connect low-level systems programming to data engineering and show **C, Linux, POSIX, systemd, Kafka/librdkafka, binary persistence and observability**.
+These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is a focused reference implementation with build automation and a clear path toward production hardening.
 
-- **[Linux System Metrics Agent](/blog/c-linux-systems-engineering):** A lightweight C/Linux telemetry agent that reads kernel/system interfaces and filesystem statistics, emits structured metrics and includes a systemd service definition. **Technologies:** C, Linux, POSIX, /proc, systemd, JSON, Make.
-- **[C Kafka Telemetry Producer](/blog/c-linux-systems-engineering):** A native librdkafka producer for keyed industrial telemetry events, connecting C systems programming with the Kafka streaming platform. **Technologies:** C, Linux, librdkafka, Apache Kafka, JSON, event streaming.
-- **[Mini Database Storage Engine](/blog/c-linux-systems-engineering):** A compact C implementation of binary record persistence and ID-based lookup for exploring storage-engine/database-internals concepts. **Technologies:** C, Linux, binary files, persistence, systems programming.
+### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
+A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
 
-[View C & Linux case details](/blog/c-linux-systems-engineering)
+**Technologies:** C, Linux, POSIX, /proc, statvfs, systemd, JSON, GCC, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/linux-system-metrics-agent)
+
+### ⚡ [C Kafka Telemetry Producer](/blog/c-linux-systems-engineering)
+A native **librdkafka** producer for versioned industrial telemetry. Machine ID is used as the Kafka key to support deterministic partitioning and per-machine event ordering, while a JSON Schema defines the event contract independently from producer code.
+
+**Technologies:** C, Linux, librdkafka, Apache Kafka, JSON Schema, event streaming, GCC, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-kafka-telemetry-producer)
+
+### 🗄️ [C Mini Database Engine](/blog/c-linux-systems-engineering)
+A compact storage-engine implementation exposing the mechanics beneath relational databases: fixed binary record layout, append persistence, duplicate-ID checks, sequential lookup, logical deletion and file-position updates. The design intentionally stays readable before evolving toward pages, indexes and write-ahead logging.
+
+**Technologies:** C, Linux, binary files, persistence, storage-engine concepts, Make, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engin)
+
+---
 
 ## Data Engineering & Cloud Data Platforms
 
-These cases focus on modern data-platform engineering across **Snowflake, dbt, Python, FastAPI/REST, Apache Kafka, Terraform, GitHub Actions, Docker, MDM, data quality, incremental ELT and Infrastructure as Code**.
+These cases show a broader **enterprise data-platform engineering** stack: Snowflake and dbt ELT, Microsoft Fabric/OneLake lakehouse patterns, Python/FastAPI data products, Kafka streaming and CDC, Terraform Infrastructure as Code, GitHub Actions, Docker, MDM/data quality, semantic governance and AI-ready data services.
 
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
 A governed **Customer 360 data product** that standardizes CRM and ERP customer data, resolves identities and publishes a golden customer dimension. A **Python FastAPI REST layer** exposes governed customer and data-quality endpoints from Snowflake, with OpenAPI documentation and Docker packaging. The implementation also includes synthetic data, dbt tests, snapshots, macros and architecture documentation.
@@ -116,16 +130,22 @@ A data engineering project connecting chemical spectroscopy analysis to ERP work
 ---
 
 ### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
-A reference **medallion/lakehouse architecture** covering source ingestion, OneLake Bronze, PySpark/Delta Silver transformations, governed Gold models and semantic consumption for Power BI or AI. **Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, Power BI, semantic models.  
-[Read the case study](/blog/fabric-enterprise-data-platform) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/fabric-enterprise-data-platform)
+A reference enterprise **medallion/lakehouse platform** showing how ERP, CRM, APIs and files can move through Data Factory into OneLake/Lakehouse Bronze, then through PySpark/Delta standardization and data-quality processing into Silver and governed Gold models. A semantic-consumption boundary is designed for Power BI, APIs and governed AI.
+
+**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, Power BI, semantic models, data quality, CI/CD.  
+[Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
 
 ### 🔄 [CDC with Debezium, Kafka & Snowflake](/blog/cdc-kafka-snowflake)
-A change-data-capture architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**, with a local Docker Compose environment and Debezium connector definition. **Technologies:** PostgreSQL, Debezium, Kafka, Docker Compose, CDC, Snowflake, dbt.  
-[Read the case study](/blog/cdc-kafka-snowflake) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/cdc-kafka-snowflake)
+An end-to-end CDC reference architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**. The repository includes a runnable local PostgreSQL/Kafka/Debezium environment, sample operational tables, a connector definition, a Snowflake raw-event model retaining Kafka lineage metadata, and dbt models for typed staging and incremental current-state analytics.
+
+**Technologies:** PostgreSQL, WAL, Debezium, Apache Kafka, Docker Compose, Snowflake, dbt, SQL, CDC, incremental ELT.  
+[Read the case study](/blog/cdc-kafka-snowflake) · [View source on GitHub](https://github.com/oleglihvoinen/cdc-kafka-snowflake-pipeline)
 
 ### 🧠 [Governed Semantic Layer + AI Data Agent](/blog/semantic-ai-data-agent)
-A governed analytical-AI pattern where approved semantic metric contracts sit between business questions and physical warehouse models. A FastAPI service exposes metric definitions and provenance for constrained AI/data-agent consumption. **Technologies:** Python, FastAPI, REST, YAML semantic contracts, Snowflake/dbt-ready metrics, LLM grounding, provenance, governance.  
-[Read the case study](/blog/semantic-ai-data-agent) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/semantic-ai-data-agent)
+A governed analytical-AI pattern that places **approved metric and dimension contracts between natural-language questions and physical warehouse models**. The FastAPI layer publishes governed metrics, validates requested dimensions and returns ownership/provenance, creating a controlled boundary for future Snowflake/dbt or Fabric-backed AI agents instead of unrestricted LLM-to-database access.
+
+**Technologies:** Python, FastAPI, REST, Pydantic, YAML semantic contracts, Snowflake/dbt-ready metrics, Microsoft Fabric-ready semantics, LLM grounding, provenance, governance, Docker, CI.  
+[Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
 
 ## AI & Machine Learning Projects
 
