@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "Oleg Lihvoinen | Senior Data Engineer · Data Architecture · AI Platforms"
-description: "Senior Data Engineer with 15+ years across enterprise data, MDM, analytics, cloud data platforms and AI-enabled applications."
+title: "Senior Data Engineer · Web, Mobile & SaaS Products"
+description: "Senior Data Engineer with 15+ years across enterprise data, MDM, cloud platforms and AI, plus hands-on development of web applications, mobile apps and SaaS products."
 permalink: /
 ---
 
 # Oleg Lihvoinen
 
-## Senior Data Engineer | Enterprise Data, AI & Applications
+## Senior Data Engineer | Data & AI Platforms | Web, Mobile & SaaS Products
 
-I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines established Microsoft and Oracle platforms with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services.
+I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines Microsoft and Oracle platforms with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services — together with hands-on development of **web applications, Android and iOS apps, and SaaS products**.
 
-I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. The portfolio below covers enterprise MDM, database applications, C/Linux systems engineering, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products and governed AI. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
+I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. I also build customer-facing digital products, from database-backed web applications and APIs to **mobile apps and SaaS marketplaces**. The portfolio covers enterprise MDM, database applications, C/Linux systems engineering, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products, governed AI, web applications and mobile product development. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
 
 **Based in Järvenpää, Finland** · [Contact me](mailto:lihvoinenoleg@gmail.com)
 
