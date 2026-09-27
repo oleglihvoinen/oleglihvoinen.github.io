@@ -2,7 +2,7 @@
 
 # 🛳️ Titanic Survival Prediction Using XGBoost
 
-This project builds a machine learning model to predict **which passengers survived the Titanic disaster**, using one of the most famous datasets in data science.
+This project builds a ML model to predict **which passengers survived the Titanic disaster**, using one of the most famous datasets in data science.
 Using the Kaggle Titanic dataset, we develop a clean ML workflow with preprocessing, feature engineering, model training, and evaluation — powered by **XGBoost**, one of the strongest gradient boosting algorithms.
 
 The result is a high-performance classifier that achieves **82–86% accuracy** and produces a Kaggle-ready submission file.
@@ -71,7 +71,7 @@ We use:
 
 * 500 trees
 * Max depth 4
-* Learning rate 0.03
+* XGBoost eta 0.03
 * Row and feature subsampling
 
 This leads to strong predictive accuracy without overfitting.
