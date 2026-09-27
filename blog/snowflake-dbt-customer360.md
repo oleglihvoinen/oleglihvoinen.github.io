@@ -5,7 +5,7 @@ permalink: /blog/snowflake-dbt-customer360
 ---
 # Snowflake + dbt Customer 360
 
-**Role focus:** Data Engineering · MDM · Data Quality · Data Architecture
+**Role focus:** Data Engineering · MDM · REST API · Data Quality · Data Architecture
 
 This portfolio case shows how fragmented customer records from CRM and ERP systems can be transformed into a governed Customer 360 model in Snowflake using dbt.
 
@@ -35,7 +35,13 @@ The implementation keeps source-specific cleanup in staging and business identit
 
 In a production implementation I would extend this baseline with probabilistic matching where appropriate, SCD2 history, exception queues, stewardship workflows, source freshness SLAs and richer observability.
 
+## REST data-product layer
+
+A **Python FastAPI** service now exposes the governed Snowflake customer mart through versioned REST endpoints for customer lookup, search and record-level quality status. FastAPI provides the OpenAPI contract, while a Dockerfile packages the service for repeatable deployment. Warehouse credentials stay in environment variables rather than source control.
+
+This demonstrates how a dbt/Snowflake model can become a reusable **data product** consumed by applications or AI services without exposing physical warehouse tables directly.
+
 ## Technologies
-**Snowflake · dbt · SQL · MDM · dimensional modeling · data quality · Git**
+**Snowflake · dbt · SQL · Python · FastAPI · REST API · OpenAPI · Docker · MDM · dimensional modeling · data quality · Git**
 
 [View the public source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
