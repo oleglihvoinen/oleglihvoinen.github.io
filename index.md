@@ -19,8 +19,25 @@ I bring an enterprise data perspective to product development: defining reliable
 
 ## Selected Work
 
+### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](https://haesiivooja.fi/)
+A Finnish **SaaS marketplace** connecting customers and cleaning professionals through a digital service. Customers can discover cleaners, view pricing and arrange bookings; cleaners can create profiles, set availability and prices, and receive work opportunities. The platform includes a web presence and **Android and iOS mobile apps developed with Kotlin and Swift**.
+
+[Visit HaeSiivooja](https://haesiivooja.fi/)
+
+### 🧭 [Master Data Management Tool](/blog/master-data-management)
+A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing and harmonisation.
+
+**Technologies:** Oracle APEX, Oracle Database, PL/SQL.  
+[Explore the tool and demo](/blog/master-data-management)
+
+---
+
+## Data Engineering & Cloud Data Platforms
+
+These cases focus on modern data-platform engineering: Snowflake, dbt, governed data models, incremental ELT, data quality and automated delivery.
+
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
-A governed **Customer 360 / MDM pipeline** that standardizes CRM and ERP customer data, resolves cross-system identities, applies survivorship rules and publishes a golden customer dimension for analytics and AI.
+A governed **Customer 360 / MDM pipeline** that standardizes CRM and ERP customer data, resolves cross-system identities, applies survivorship rules and publishes a golden customer dimension. The public implementation includes synthetic data, Snowflake setup, dbt models, tests, a snapshot, reusable macro, configuration example, architecture notes and expected outputs.
 
 **Technologies:** Snowflake, dbt, SQL, MDM, data quality, dimensional modeling.  
 [Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
@@ -37,17 +54,15 @@ A production-oriented delivery pattern for Snowflake transformations using **Git
 **Technologies:** Snowflake, dbt, GitHub Actions, CI/CD, SQL, DevOps.  
 [Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
 
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
+A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
 
-### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](https://haesiivooja.fi/)
-A Finnish **SaaS marketplace** connecting customers and cleaning professionals through a digital service. Customers can discover cleaners, view pricing and arrange bookings; cleaners can create profiles, set availability and prices, and receive work opportunities. The platform includes a web presence and **Android and iOS mobile apps developed with Kotlin and Swift**.
+**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
+[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
-[Visit HaeSiivooja](https://haesiivooja.fi/)
+---
 
-### 🧭 [Master Data Management Tool](/blog/master-data-management)
-A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing and harmonisation.
-
-**Technologies:** Oracle APEX, Oracle Database, PL/SQL.  
-[Explore the tool and demo](/blog/master-data-management)
+## Database & Business Applications
 
 ### 🛠️ [Oracle DBA Tool](/blog/dba-tool)
 An Oracle APEX application for database administration, bringing together session monitoring, performance analysis, schema exploration, health checks and user management in one interface.
@@ -60,8 +75,6 @@ A browser-based utility for moving CSV and XML data into and out of Oracle datab
 
 **Technologies:** Oracle APEX, Oracle Database.  
 [See details and demo](/blog/data-import-export-web-application)
-
----
 
 ### 💊 [Pharmacy Online](/blog/pharmacy-online)
 An Oracle APEX web database connecting pharmacies, doctors, surgeries and patients. It brings prescription tracking, operational data and reporting together in one application.
@@ -79,16 +92,10 @@ A web publishing application with a public blog reader and a separate administra
 [Explore the platform](/blog/oracle-apex-blogging-platform) · [Download from SourceForge](https://sourceforge.net/projects/blogging-platform/)
 
 ### 🚗 [Car Dealer Web Application](/blog/car-dealer-web-application)
-A database-backed vehicle marketplace built with Oracle APEX. Registered users can create and manage listings with technical specifications and multiple photos. Buyers can search by make, model, year, price and mileage. The application also supports a single-dealer setup for managing a business's own vehicle inventory, with a data model and reusable listing structure that can be adapted to other marketplaces.
+A database-backed vehicle marketplace built with Oracle APEX. Registered users can create and manage listings with technical specifications and multiple photos. Buyers can search by make, model, year, price and mileage. The application also supports a single-dealer setup for managing a business's own vehicle inventory.
 
 **Technologies:** Oracle APEX, Oracle Database, HTML, CSS and JavaScript.  
 [Explore the application and watch the demo](/blog/car-dealer-web-application)
-
-### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
-
-**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
-[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ---
 
