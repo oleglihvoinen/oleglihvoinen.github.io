@@ -1,5 +1,5 @@
 
-# 💰 Loan Default Probability Prediction (Machine Learning Project)
+# 💰 Loan Default Probability Prediction (ML Project)
 
 ## 🎯 Project Goal
 
@@ -43,7 +43,7 @@ id,annual_income,debt_to_income_ratio,credit_score,loan_amount,interest_rate,gen
 
 ## 🧠 Model Objective
 
-We train a **machine learning model** to predict the probability that a borrower repays their loan (`loan_paid_back = 1`).
+We train a **ML model** to predict the probability that a borrower repays their loan (`loan_paid_back = 1`).
 The output is a **probability between 0 and 1**, not a simple yes/no label.
 
 ---
