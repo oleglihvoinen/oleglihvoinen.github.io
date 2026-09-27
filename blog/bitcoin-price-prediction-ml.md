@@ -150,7 +150,7 @@ class BitcoinLSTM:
 - Sequence length: 60 days
 - 2 LSTM layers with dropout regularization
 - Early stopping to prevent overfitting
-- Learning rate reduction on plateau
+- Optimizer step-size reduction on plateau
 
 ## Model Training and Evaluation
 
@@ -233,7 +233,7 @@ CONFIDENCE        75.2%
 **Solution**: Used percentage changes and differencing to stabilize time series
 
 ### 3. Overfitting
-**Challenge**: Models memorizing noise instead of learning patterns
+**Challenge**: Models memorizing noise instead of fitting useful patterns
 **Solution**: Implemented dropout, early stopping, and rigorous validation
 
 ### 4. Computational Resources
@@ -330,7 +330,6 @@ The complete source code is available on [GitHub](https://github.com/oleglihvoin
 1. [CoinGecko API Documentation](https://www.coingecko.com/en/api)
 2. [TA Technical Analysis Library](https://github.com/bukosabino/ta)
 3. [TensorFlow Time Series Guide](https://www.tensorflow.org/tutorials/structured_data/time_series)
-4. [ML for Trading](https://www.oreilly.com/library/view/machine-learning-for/9781492085249/)
 
 ---
 
