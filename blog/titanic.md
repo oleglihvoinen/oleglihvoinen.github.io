@@ -112,7 +112,7 @@ Through training the model, several survival patterns emerge:
 * **Fare and embarkation port** contain embedded socioeconomic signals
 * **Traveling with family** (SibSp/Parch) offers mixed effects depending on size
 
-XGBoost is particularly good at learning these nonlinear interactions.
+XGBoost is particularly good at capturing these nonlinear interactions.
 
 ---
 
