@@ -9,7 +9,7 @@ permalink: /blog/cdc-kafka-snowflake
 
 ![CDC Kafka Snowflake architecture](/assets/architecture/cdc-kafka-snowflake-pipeline.png)
 
-## Executive summary
+## Summary
 
 This architecture implements **change data capture** from PostgreSQL into an analytical platform without recurring full-table extraction. The end-to-end flow is:
 
