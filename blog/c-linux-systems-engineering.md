@@ -7,7 +7,7 @@ permalink: /blog/c-linux-systems-engineering
 
 **Role focus:** Systems Engineering · Data Engineering · Linux · Event Streaming
 
-These projects show the lower-level engineering behind the data platforms in the rest of the portfolio. Rather than treating C and Linux as isolated programming exercises, each case connects systems concepts to telemetry, event streaming or database internals.
+This section demonstrates systems-level engineering beneath modern data platforms: Linux kernel interfaces, native C services, Kafka event production and storage-engine fundamentals. Each implementation is built around explicit operational boundaries, versioned interfaces and automation rather than isolated code samples.
 
 ---
 
@@ -15,11 +15,13 @@ These projects show the lower-level engineering behind the data platforms in the
 
 ![Linux System Metrics Agent architecture](/assets/architecture/linux-system-metrics-agent.png)
 
-The **Linux System Metrics Agent** is a small C service that reads telemetry directly from Linux kernel interfaces. It samples CPU activity from `/proc/stat`, memory from `/proc/meminfo`, network counters from `/proc/net/dev`, and filesystem utilization through `statvfs()`. The output is newline-delimited JSON so it can be collected by a log/metrics pipeline or forwarded into Kafka.
+The **Linux System Metrics Agent** is a native C service that collects CPU, memory, network and filesystem telemetry directly from Linux kernel interfaces. CPU activity is derived from `/proc/stat`, memory from `/proc/meminfo`, network counters from `/proc/net/dev`, and filesystem utilization through `statvfs()`.
 
-The design deliberately keeps **collection separate from transport**. The C process is responsible for accurate host metrics; delivery to Kafka, OpenTelemetry, a warehouse or another observability backend can be attached as a downstream concern. A hardened systemd unit demonstrates how the collector could be run as a long-lived Linux service with restart behavior and restricted privileges.
+The agent emits newline-delimited JSON, keeping the telemetry format simple and machine-readable for downstream ingestion. The architecture deliberately separates **metric collection from transport**: the collector owns accurate host sampling, while Kafka, OpenTelemetry, Fluent Bit or another backend can be introduced as a separate delivery layer.
 
-**Engineering themes:** direct kernel interfaces, resource-efficient collection, service lifecycle, JSON telemetry, Linux hardening, CI compilation.
+A hardened `systemd` unit defines restart behavior, restricted privileges and service lifecycle management. GitHub Actions validates compilation and basic runtime output on Ubuntu.
+
+**Engineering themes:** Linux kernel interfaces, low-overhead telemetry, service lifecycle, structured output, operational hardening, CI.
 
 **Technologies:** C · Linux · POSIX · /proc · statvfs · systemd · JSON · GCC · GitHub Actions.
 
@@ -31,11 +33,13 @@ The design deliberately keeps **collection separate from transport**. The C proc
 
 ![C Kafka Telemetry Producer architecture](/assets/architecture/c-kafka-telemetry-producer.png)
 
-The **C Kafka Telemetry Producer** represents an edge or industrial process publishing machine events into an event-driven data platform. The native C application uses **librdkafka** to send versioned JSON events to a Kafka topic. Machine ID is used as the message key, which gives a clear partitioning strategy and keeps events for the same machine ordered inside a partition.
+The **C Kafka Telemetry Producer** models an edge or industrial integration where machine events are published directly into an event-streaming platform. The native application uses **librdkafka** to publish versioned telemetry records to Kafka.
 
-The repository also contains a JSON Schema for the event contract. This separates the event definition from producer code and makes the interface easier to validate and evolve. The current implementation demonstrates delivery callbacks, explicit flushing and environment-based broker configuration; a production version would add SASL/TLS, idempotent producer settings, Schema Registry and operational metrics.
+Machine ID is used as the message key, providing deterministic partition selection and preserving per-machine ordering within a partition. A standalone JSON Schema defines the telemetry contract independently from producer code, which improves compatibility management and schema governance.
 
-**Engineering themes:** producer semantics, keys and partitions, event versioning, data contracts, delivery acknowledgement, edge-to-platform integration.
+The implementation includes delivery callbacks, explicit flush semantics and environment-based broker configuration. The operational design can be extended with SASL/TLS, idempotent producer settings, Schema Registry, Avro/Protobuf, batching, producer metrics and dead-letter handling.
+
+**Engineering themes:** producer semantics, partitioning strategy, event contracts, acknowledgement handling, edge-to-platform integration.
 
 **Technologies:** C · Linux · librdkafka · Apache Kafka · JSON Schema · event streaming · GitHub Actions.
 
@@ -47,16 +51,14 @@ The repository also contains a JSON Schema for the event contract. This separate
 
 ![C Mini Database Engine architecture](/assets/architecture/c-mini-database-engine.png)
 
-The **C Mini Database Engine** is intentionally small so the storage mechanics remain visible. Records have a fixed binary representation and are appended to a data file. The CLI supports `INSERT`, `SELECT`, `DELETE` and `LIST`; duplicate IDs are rejected and deletion uses a tombstone flag rather than physically rewriting the file.
+The **C Mini Database Engine** exposes storage behavior below the SQL abstraction layer. Records use a fixed binary representation and are persisted directly to a data file. The CLI supports `INSERT`, `SELECT`, `DELETE` and `LIST`, with duplicate-ID validation and logical deletion through tombstone state.
 
-This provides a useful bridge between application-level SQL knowledge and the lower-level concerns implemented by database engines: record layout, persistence, file offsets, scans and deletion semantics. The repository includes a smoke test and CI build. The natural next stage is a page abstraction followed by an in-memory or B+tree index, free-page management, checksums and write-ahead logging.
+The design makes record layout, file positions, sequential lookup and persistence semantics explicit. Automated smoke tests verify insert, lookup and deletion behavior in CI.
 
-**Engineering themes:** storage representation, binary persistence, sequential access, logical deletion, database internals, incremental evolution toward indexed/transactional storage.
+The architecture roadmap extends naturally toward page management, memory-resident indexes, B-tree/B+tree structures, free-page tracking, checksums, write-ahead logging and crash recovery.
 
-**Technologies:** C · Linux · binary files · persistence · storage-engine concepts · Make · GitHub Actions.
+**Engineering themes:** record layout, binary persistence, storage access, logical deletion, database internals, transactional architecture.
 
-[View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engin)
+**Technologies:** C · Linux · binary files · persistence · storage-engine architecture · Make · GitHub Actions.
 
----
-
-These are **portfolio/reference implementations** intended to demonstrate the engineering approach and underlying concepts; they are not presented as production deployments.
+[View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engine)
