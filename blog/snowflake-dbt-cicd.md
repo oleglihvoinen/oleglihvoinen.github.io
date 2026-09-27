@@ -36,4 +36,4 @@ A mature implementation would add slim CI/state comparison, environment-specific
 ## Technologies
 **Snowflake · dbt · GitHub Actions · CI/CD · SQL · DevOps**
 
-[View the public source and workflow on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-cicd)
+[View the public source and workflow on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
