@@ -19,6 +19,25 @@ I bring an enterprise data perspective to product development: defining reliable
 
 ## Selected Work
 
+### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
+A governed **Customer 360 / MDM pipeline** that standardizes CRM and ERP customer data, resolves cross-system identities, applies survivorship rules and publishes a golden customer dimension for analytics and AI.
+
+**Technologies:** Snowflake, dbt, SQL, MDM, data quality, dimensional modeling.  
+[Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-customer360)
+
+### 🏔️ [Modern Snowflake + dbt ELT Analytics Platform](/blog/snowflake-dbt-analytics-platform)
+A layered **RAW → staging → intermediate → marts** architecture for turning operational data into analytics-ready Snowflake models, including incremental fact processing designed for scalable ELT workloads.
+
+**Technologies:** Snowflake, dbt, SQL, ELT, dimensional modeling, incremental processing.  
+[Read the case study](/blog/snowflake-dbt-analytics-platform) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-analytics-platform)
+
+### ⚙️ [Snowflake + dbt CI/CD](/blog/snowflake-dbt-cicd)
+A production-oriented delivery pattern for Snowflake transformations using **GitHub Actions and dbt**, with automated builds and data tests, secret-based credentials and a Git-based promotion workflow.
+
+**Technologies:** Snowflake, dbt, GitHub Actions, CI/CD, SQL, DevOps.  
+[Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-cicd)
+
+
 ### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](https://haesiivooja.fi/)
 A Finnish **SaaS marketplace** connecting customers and cleaning professionals through a digital service. Customers can discover cleaners, view pricing and arrange bookings; cleaners can create profiles, set availability and prices, and receive work opportunities. The platform includes a web presence and **Android and iOS mobile apps developed with Kotlin and Swift**.
 
