@@ -9,31 +9,39 @@ permalink: /blog/cdc-kafka-snowflake
 
 ![CDC Kafka Snowflake architecture](/assets/architecture/cdc-kafka-snowflake-pipeline.png)
 
-## Goal
+## Executive summary
 
-This case demonstrates a **change-data-capture pipeline** that moves operational database changes into an analytical platform without repeatedly extracting complete source tables. It is designed around the flow **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt models**.
+This architecture implements **change data capture** from PostgreSQL into an analytical platform without recurring full-table extraction. The end-to-end flow is:
 
-## Source and capture
+**PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt staging/current-state models**
 
-The local Docker Compose environment starts PostgreSQL, Kafka and Debezium. PostgreSQL is configured for logical replication and contains example customer and order tables. A Debezium PostgreSQL connector reads the write-ahead log and emits insert, update and delete operations as events.
+The design separates operational change capture, durable event transport, immutable raw storage and analytical state reconstruction.
 
-This keeps the extraction logic close to the database transaction log and turns changes into a durable stream instead of a sequence of full refreshes.
+## Source capture
 
-## Streaming and raw ingestion
+The Docker Compose environment starts PostgreSQL, Kafka and Debezium. PostgreSQL runs with logical replication enabled and includes operational customer and order tables.
 
-Kafka provides the durable event layer, including topics, partitions, offsets and replay. The Snowflake RAW design intentionally retains Kafka topic, partition and offset metadata together with the event payload. That metadata is useful for lineage, troubleshooting, deduplication and idempotent ingestion.
+A Debezium PostgreSQL connector consumes the write-ahead log and converts insert, update and delete operations into structured change events. This approach moves extraction from scheduled table scans to transaction-log-driven event capture.
 
-The public repository does not claim a live Snowflake connection: Snowflake is the defined downstream integration point and requires external credentials/infrastructure.
+## Streaming and lineage
 
-## dbt modeling
+Kafka provides the durable event layer through topics, partitions, offsets and replay. The Snowflake RAW design retains Kafka topic, partition and offset metadata alongside the event payload.
 
-The included dbt staging model extracts the Debezium event envelope into typed analytical fields. An incremental current-state model uses the event sequence to keep the latest representation of an order while respecting CDC delete operations.
+That metadata creates a strong operational lineage model for troubleshooting, replay analysis, deduplication and idempotent ingestion.
 
-This demonstrates an important separation: the RAW layer preserves the change history, while dbt derives consumer-friendly state and business models.
+## dbt transformation layer
 
-## Production evolution
+The staging model extracts typed fields from the Debezium envelope. An incremental current-state model then resolves the latest event for each order while respecting delete operations.
 
-A production design would add Kafka Connect/Snowflake connector configuration, Schema Registry, secure SASL/TLS connections, connector monitoring, dead-letter handling, exactly-once/idempotency controls, source schema evolution, freshness SLAs, dbt CI and end-to-end observability.
+This preserves an important architectural distinction: **RAW retains change history; dbt derives consumer-facing state**.
+
+## Reliability and enterprise controls
+
+A production deployment would add managed Snowflake ingestion or Kafka Connect configuration, Schema Registry, SASL/TLS, secret management, connector observability, dead-letter handling, source schema-evolution policy, freshness SLAs, idempotency controls and end-to-end operational monitoring.
+
+## Repository scope
+
+The PostgreSQL, Kafka and Debezium components are directly runnable through Docker Compose. Snowflake integration is represented through table design and dbt models and requires environment-specific credentials and services.
 
 **Technologies:** PostgreSQL · WAL · Debezium · Apache Kafka · Docker Compose · Snowflake · dbt · SQL · CDC · incremental ELT.
 
