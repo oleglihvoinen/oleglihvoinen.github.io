@@ -9,7 +9,7 @@ permalink: /blog/fabric-enterprise-data-platform
 
 ![Microsoft Fabric Enterprise Data Platform architecture](/assets/architecture/fabric-enterprise-data-platform.png)
 
-## Executive summary
+## Summary
 
 This architecture defines a governed **Microsoft Fabric lakehouse platform** from source ingestion through semantic consumption. The design separates source-fidelity storage, technical standardization, business modeling and semantic delivery so downstream analytics are not coupled directly to operational source structures.
 
