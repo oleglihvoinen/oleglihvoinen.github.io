@@ -7,11 +7,11 @@ permalink: /
 
 # Oleg Lihvoinen
 
-## Senior Data Engineer | Data & AI Platforms | Web, Mobile & SaaS Products
+## Senior Data Engineer | C & Linux Systems | Data & AI Platforms | Web, Mobile & SaaS
 
-I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines **established Microsoft and Oracle platforms** with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services, together with hands-on development of **web applications, Android and iOS mobile applications, and SaaS platforms for web and mobile**.
+I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines **established Microsoft and Oracle platforms** with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services, together with **C and Linux systems development** and hands-on development of **web applications, Android and iOS mobile applications, and SaaS platforms for web and mobile**.
 
-I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. I also build **customer-facing SaaS products and platforms across web and mobile**, including database-backed web applications, APIs, marketplaces, Android applications and iOS applications. The portfolio below covers enterprise MDM, database applications, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products, governed AI, **C/Linux systems engineering**, and full-stack SaaS product development for web and mobile. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
+I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. I also work close to the operating-system and runtime layer through **C, Linux, POSIX services, systemd, native Kafka integration and storage-engine development**. In parallel, I build **customer-facing SaaS products and platforms across web and mobile**, including database-backed web applications, APIs, marketplaces, Android applications and iOS applications. The portfolio below covers enterprise MDM, database applications, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products, governed AI, **C/Linux systems engineering**, and full-stack SaaS product development for web and mobile. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
 
 **Based in Järvenpää, Finland** · [Contact me](mailto:lihvoinenoleg@gmail.com)
 
@@ -170,7 +170,7 @@ These projects apply retrieval, predictive modeling and language-model integrati
 
 ## About Me
 
-My background combines decades of work with **Microsoft and Oracle platforms** and hands-on development across data, analytics and applications. I work with **Oracle Database, Microsoft SQL Server, Snowflake and other database technologies**, choosing the right data platform for each problem. My broader toolkit includes **Microsoft Fabric, Azure, Google Cloud, AWS, dbt, DevOps and CI/CD**, alongside SQL, T-SQL, PL/SQL, Python, data quality and MDM, Oracle APEX, APIs and AI-assisted applications. I also build products that bring data into customer-facing web and mobile experiences.
+My background combines **enterprise data engineering, C/Linux systems development, Microsoft and Oracle platforms, analytics, AI and application development**. I work with **Oracle Database, Microsoft SQL Server, Snowflake and other database technologies**, choosing the right data platform for each problem. My broader toolkit includes **Microsoft Fabric, Azure, Google Cloud, AWS, dbt, DevOps and CI/CD**, alongside SQL, T-SQL, PL/SQL, Python, data quality and MDM, Oracle APEX, APIs and AI-assisted applications. I also build products that bring data into customer-facing web and mobile experiences.
 
 I am interested in **Senior Data Engineer, MDM and data architecture roles**, as well as opportunities to build data-driven AI and SaaS products.
 
