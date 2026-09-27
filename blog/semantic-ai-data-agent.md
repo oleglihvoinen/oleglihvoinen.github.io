@@ -9,7 +9,7 @@ permalink: /blog/semantic-ai-data-agent
 
 ![Governed Semantic AI Data Agent architecture](/assets/architecture/semantic-ai-data-agent.png)
 
-## Executive summary
+## Summary
 
 This architecture creates a controlled semantic boundary between natural-language analytics and physical data models. Instead of giving an LLM unrestricted access to warehouse tables, the platform exposes approved metrics, dimensions, ownership and provenance through a typed API.
 
