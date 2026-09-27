@@ -41,4 +41,4 @@ A production version can add source freshness checks, snapshots, reusable macros
 ## Technologies
 **Snowflake · dbt · SQL · ELT · dimensional modeling · incremental processing**
 
-[View the public source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-analytics-platform)
+[View the public source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-analytics-platform)
