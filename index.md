@@ -34,13 +34,19 @@ A browser-based **MDM and data quality application** built with Oracle APEX. It 
 
 ## Data Engineering & Cloud Data Platforms
 
-These cases focus on modern data-platform engineering: Snowflake, dbt, governed data models, incremental ELT, data quality and automated delivery.
+These cases focus on modern data-platform engineering across **Snowflake, dbt, Python, FastAPI/REST, Apache Kafka, Terraform, GitHub Actions, Docker, MDM, data quality, incremental ELT and Infrastructure as Code**.
 
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
-A governed **Customer 360 / MDM pipeline** that standardizes CRM and ERP customer data, resolves cross-system identities, applies survivorship rules and publishes a golden customer dimension. The public implementation includes synthetic data, Snowflake setup, dbt models, tests, a snapshot, reusable macro, configuration example, architecture notes and expected outputs.
+A governed **Customer 360 data product** that standardizes CRM and ERP customer data, resolves identities and publishes a golden customer dimension. A **Python FastAPI REST layer** exposes governed customer and data-quality endpoints from Snowflake, with OpenAPI documentation and Docker packaging. The implementation also includes synthetic data, dbt tests, snapshots, macros and architecture documentation.
 
-**Technologies:** Snowflake, dbt, SQL, MDM, data quality, dimensional modeling.  
+**Technologies:** Snowflake, dbt, SQL, Python, FastAPI, REST API, OpenAPI, Docker, MDM, data quality, dimensional modeling.  
 [Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
+
+### 🌊 [Kafka + Terraform Streaming Data Platform](/blog/kafka-terraform-streaming-platform)
+An event-driven data pipeline using **Apache Kafka, Python and Terraform**, with a versioned order-event producer, consumer-group processing, explicit offset handling and Infrastructure as Code for managed Kafka resources. The architecture is designed for streaming ingestion into Snowflake and downstream dbt models.
+
+**Technologies:** Apache Kafka, Terraform, Python, event streaming, Infrastructure as Code, Snowflake integration, Git, CI/CD.  
+[Read the case study](/blog/kafka-terraform-streaming-platform) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/kafka-terraform-streaming-platform)
 
 ### 🏔️ [Modern Snowflake + dbt ELT Analytics Platform](/blog/snowflake-dbt-analytics-platform)
 A layered **RAW → staging → intermediate → marts** architecture for turning operational data into analytics-ready Snowflake models, including incremental fact processing designed for scalable ELT workloads.
