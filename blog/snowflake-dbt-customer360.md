@@ -38,4 +38,4 @@ In a production implementation I would extend this baseline with probabilistic m
 ## Technologies
 **Snowflake · dbt · SQL · MDM · dimensional modeling · data quality · Git**
 
-[View the public source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/snowflake-dbt-customer360)
+[View the public source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
