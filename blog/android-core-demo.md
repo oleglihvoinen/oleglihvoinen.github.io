@@ -10,7 +10,7 @@
 
 ## 🎯 Overview
 
-In this part of my Android learning series, I built a small app to practice **core Android components** and **UI list layouts**.
+In this part of my Android engineering series, I built a small app to implement **core Android components** and **UI list layouts**.
 This project covers:
 
 * **Activities**, **Intents**, **IntentServices**, and **BroadcastReceivers**
@@ -316,9 +316,9 @@ Register the receiver in `AndroidManifest.xml`:
 
 ---
 
-## 🧠 Learning Diary
+## 🧠 Engineering Notes
 
-**What I learned:**
+**Engineering outcomes:**
 
 * The relationship between **Activity**, **Intent**, **IntentService**, and **BroadcastReceiver**.
 * How to use **ListView** with custom layouts.
