@@ -180,7 +180,7 @@ sample_new.csv → PASS
 
 ---
 
-# 🤖 Machine Learning Classifier (SVM)
+# 🤖 ML Classifier (SVM)
 
 For more advanced classification, I trained an SVM:
 
@@ -254,7 +254,7 @@ This workflow is suitable for:
 
 Planned extensions include:
 
-* Deep learning spectral classifiers
+* Deep neural spectral classifiers
 * Automated peak detection and chemical interpretation
 * Integration with LIMS and MES systems
 * Real-time dashboards inside ERP
@@ -274,7 +274,7 @@ Planned extensions include:
 
 Bridging the gap between analytical instrumentation and enterprise systems is essential for modern Industry 4.0 workflows. FTIR spectroscopy is just the beginning — the same approach can be applied to Raman, NIR, UV-Vis, chromatography, and more.
 
-If you want to learn more, check out the full project on GitHub or reach out with questions!
+For implementation details, review the full project on GitHub or contact me with questions.
 
 ---
 
