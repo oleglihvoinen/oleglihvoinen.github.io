@@ -188,7 +188,7 @@ A well-tuned gradient boosting model typically achieves **AUC > 0.80**, indicati
 | ------------------------------ | -------------------------------- |
 | **Python 3.10+**               | Core language                    |
 | **pandas / scikit-learn**      | Data handling & modeling         |
-| **GradientBoosting / XGBoost** | Machine learning algorithms      |
+| **GradientBoosting / XGBoost** | ML algorithms      |
 | **ROC-AUC**                    | Model evaluation                 |
 | **Matplotlib / SHAP**          | Visualization & interpretability |
 
