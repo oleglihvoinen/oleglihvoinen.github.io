@@ -32,42 +32,6 @@ A browser-based **MDM and data quality application** built with Oracle APEX. It 
 
 ---
 
-## Data Engineering & Cloud Data Platforms
-
-These cases focus on modern data-platform engineering across **Snowflake, dbt, Python, FastAPI/REST, Apache Kafka, Terraform, GitHub Actions, Docker, MDM, data quality, incremental ELT and Infrastructure as Code**.
-
-### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
-A governed **Customer 360 data product** that standardizes CRM and ERP customer data, resolves identities and publishes a golden customer dimension. A **Python FastAPI REST layer** exposes governed customer and data-quality endpoints from Snowflake, with OpenAPI documentation and Docker packaging. The implementation also includes synthetic data, dbt tests, snapshots, macros and architecture documentation.
-
-**Technologies:** Snowflake, dbt, SQL, Python, FastAPI, REST API, OpenAPI, Docker, MDM, data quality, dimensional modeling.  
-[Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
-
-### 🌊 [Kafka + Terraform Streaming Data Platform](/blog/kafka-terraform-streaming-platform)
-An event-driven data pipeline using **Apache Kafka, Python and Terraform**, with a versioned order-event producer, consumer-group processing, explicit offset handling and Infrastructure as Code for managed Kafka resources. The architecture is designed for streaming ingestion into Snowflake and downstream dbt models.
-
-**Technologies:** Apache Kafka, Terraform, Python, event streaming, Infrastructure as Code, Snowflake integration, Git, CI/CD.  
-[Read the case study](/blog/kafka-terraform-streaming-platform) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/kafka-terraform-streaming-platform)
-
-### 🏔️ [Modern Snowflake + dbt ELT Analytics Platform](/blog/snowflake-dbt-analytics-platform)
-A layered **RAW → staging → intermediate → marts** architecture for turning operational data into analytics-ready Snowflake models, including incremental fact processing designed for scalable ELT workloads.
-
-**Technologies:** Snowflake, dbt, SQL, ELT, dimensional modeling, incremental processing.  
-[Read the case study](/blog/snowflake-dbt-analytics-platform) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-analytics-platform)
-
-### ⚙️ [Snowflake + dbt CI/CD](/blog/snowflake-dbt-cicd)
-A production-oriented delivery pattern for Snowflake transformations using **GitHub Actions and dbt**, with automated builds and data tests, secret-based credentials and a Git-based promotion workflow.
-
-**Technologies:** Snowflake, dbt, GitHub Actions, CI/CD, SQL, DevOps.  
-[Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
-
-### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
-
-**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
-[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-
----
-
 ## Database & Business Applications
 
 ### 🛠️ [Oracle DBA Tool](/blog/dba-tool)
@@ -102,6 +66,42 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 **Technologies:** Oracle APEX, Oracle Database, HTML, CSS and JavaScript.  
 [Explore the application and watch the demo](/blog/car-dealer-web-application)
+
+---
+
+## Data Engineering & Cloud Data Platforms
+
+These cases focus on modern data-platform engineering across **Snowflake, dbt, Python, FastAPI/REST, Apache Kafka, Terraform, GitHub Actions, Docker, MDM, data quality, incremental ELT and Infrastructure as Code**.
+
+### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
+A governed **Customer 360 data product** that standardizes CRM and ERP customer data, resolves identities and publishes a golden customer dimension. A **Python FastAPI REST layer** exposes governed customer and data-quality endpoints from Snowflake, with OpenAPI documentation and Docker packaging. The implementation also includes synthetic data, dbt tests, snapshots, macros and architecture documentation.
+
+**Technologies:** Snowflake, dbt, SQL, Python, FastAPI, REST API, OpenAPI, Docker, MDM, data quality, dimensional modeling.  
+[Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
+
+### 🌊 [Kafka + Terraform Streaming Data Platform](/blog/kafka-terraform-streaming-platform)
+An event-driven data pipeline using **Apache Kafka, Python and Terraform**, with a versioned order-event producer, consumer-group processing, explicit offset handling and Infrastructure as Code for managed Kafka resources. The architecture is designed for streaming ingestion into Snowflake and downstream dbt models.
+
+**Technologies:** Apache Kafka, Terraform, Python, event streaming, Infrastructure as Code, Snowflake integration, Git, CI/CD.  
+[Read the case study](/blog/kafka-terraform-streaming-platform) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/kafka-terraform-streaming-platform)
+
+### 🏔️ [Modern Snowflake + dbt ELT Analytics Platform](/blog/snowflake-dbt-analytics-platform)
+A layered **RAW → staging → intermediate → marts** architecture for turning operational data into analytics-ready Snowflake models, including incremental fact processing designed for scalable ELT workloads.
+
+**Technologies:** Snowflake, dbt, SQL, ELT, dimensional modeling, incremental processing.  
+[Read the case study](/blog/snowflake-dbt-analytics-platform) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-analytics-platform)
+
+### ⚙️ [Snowflake + dbt CI/CD](/blog/snowflake-dbt-cicd)
+A production-oriented delivery pattern for Snowflake transformations using **GitHub Actions and dbt**, with automated builds and data tests, secret-based credentials and a Git-based promotion workflow.
+
+**Technologies:** Snowflake, dbt, GitHub Actions, CI/CD, SQL, DevOps.  
+[Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
+
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
+A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
+
+**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
+[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ---
 
