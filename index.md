@@ -7,7 +7,7 @@ permalink: /
 
 # Oleg Lihvoinen
 
-## Senior Data Engineer | C & Linux Systems | Data & AI Platforms | Web, Mobile & SaaS
+## Senior Data Engineer | Data & AI Platforms | Web, Mobile & SaaS | C & Linux Systems
 
 I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines **established Microsoft and Oracle platforms** with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services, together with **C and Linux systems development** and hands-on development of **web applications, Android and iOS mobile applications, and SaaS platforms for web and mobile**.
 
