@@ -9,9 +9,9 @@ permalink: /
 
 ## Senior Data Engineer | Data & AI Platforms | Web, Mobile & SaaS Products
 
-I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines Microsoft and Oracle platforms with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services — together with hands-on development of **web applications, Android and iOS apps, and SaaS products**.
+I bring **15+ years of enterprise data experience** across data engineering, master data management, analytics, integration and application development. My work combines **established Microsoft and Oracle platforms** with modern cloud data engineering, streaming, APIs, governance and AI-enabled data services, together with hands-on development of **web applications, Android and iOS mobile applications, and SaaS platforms for web and mobile**.
 
-I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. I also build customer-facing digital products, from database-backed web applications and APIs to **mobile apps and SaaS marketplaces**. The portfolio covers enterprise MDM, database applications, C/Linux systems engineering, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products, governed AI, web applications and mobile product development. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
+I design data solutions around clear contracts, reliable pipelines, governed business definitions and maintainable delivery practices. I also build **customer-facing SaaS products and platforms across web and mobile**, including database-backed web applications, APIs, marketplaces, Android applications and iOS applications. The portfolio below covers enterprise MDM, database applications, Snowflake/dbt, Microsoft Fabric, Kafka/CDC, Infrastructure as Code, REST data products, governed AI, **C/Linux systems engineering**, and full-stack SaaS product development for web and mobile. [View my repositories on GitHub](https://github.com/oleglihvoinen?tab=repositories).
 
 **Based in Järvenpää, Finland** · [Contact me](mailto:lihvoinenoleg@gmail.com)
 
@@ -69,30 +69,6 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 ---
 
-## C & Linux Systems Engineering
-
-These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is implemented with source code, build automation and explicit operational considerations.
-
-### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
-A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
-
-**Technologies:** C, Linux, POSIX, /proc, statvfs, systemd, JSON, GCC, GitHub Actions.  
-[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/linux-system-metrics-agent)
-
-### ⚡ [C Kafka Telemetry Producer](/blog/c-linux-systems-engineering)
-A native **librdkafka** producer for versioned industrial telemetry. Machine ID is used as the Kafka key to support deterministic partitioning and per-machine event ordering, while a JSON Schema defines the event contract independently from producer code.
-
-**Technologies:** C, Linux, librdkafka, Apache Kafka, JSON Schema, event streaming, GCC, GitHub Actions.  
-[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-kafka-telemetry-producer)
-
-### 🗄️ [C Mini Database Engine](/blog/c-linux-systems-engineering)
-A compact storage-engine implementation exposing the mechanics beneath relational databases: fixed binary record layout, append persistence, duplicate-ID checks, sequential lookup, logical deletion and file-position updates. The design intentionally stays readable before evolving toward pages, indexes and write-ahead logging.
-
-**Technologies:** C, Linux, binary files, persistence, storage-engine concepts, Make, GitHub Actions.  
-[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engine)
-
----
-
 ## Data Engineering & Cloud Data Platforms
 
 These cases show a broader **enterprise data-platform engineering** stack: Snowflake and dbt ELT, Microsoft Fabric/OneLake lakehouse patterns, Python/FastAPI data products, Kafka streaming and CDC, Terraform Infrastructure as Code, GitHub Actions, Docker, MDM/data quality, semantic governance and AI-ready data services.
@@ -146,6 +122,30 @@ A governed analytical-AI pattern that places **approved metric and dimension con
 
 **Technologies:** Python, FastAPI, REST, Pydantic, YAML semantic contracts, Snowflake/dbt-ready metrics, Microsoft Fabric-ready semantics, LLM grounding, provenance, governance, Docker, CI.  
 [Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
+
+## C & Linux Systems Engineering
+
+These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is implemented with source code, build automation and explicit operational considerations.
+
+### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
+A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
+
+**Technologies:** C, Linux, POSIX, /proc, statvfs, systemd, JSON, GCC, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/linux-system-metrics-agent)
+
+### ⚡ [C Kafka Telemetry Producer](/blog/c-linux-systems-engineering)
+A native **librdkafka** producer for versioned industrial telemetry. Machine ID is used as the Kafka key to support deterministic partitioning and per-machine event ordering, while a JSON Schema defines the event contract independently from producer code.
+
+**Technologies:** C, Linux, librdkafka, Apache Kafka, JSON Schema, event streaming, GCC, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-kafka-telemetry-producer)
+
+### 🗄️ [C Mini Database Engine](/blog/c-linux-systems-engineering)
+A compact storage-engine implementation exposing the mechanics beneath relational databases: fixed binary record layout, append persistence, duplicate-ID checks, sequential lookup, logical deletion and file-position updates. The design intentionally stays readable before evolving toward pages, indexes and write-ahead logging.
+
+**Technologies:** C, Linux, binary files, persistence, storage-engine concepts, Make, GitHub Actions.  
+[Read the case study](/blog/c-linux-systems-engineering) · [View source on GitHub](https://github.com/oleglihvoinen/c-mini-database-engine)
+
+---
 
 ## AI & ML Projects
 
