@@ -1,0 +1,12 @@
+[Unit]
+Description=Portfolio Linux Metrics Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/metrics-agent/metrics-agent
+Restart=on-failure
+User=metrics
+
+[Install]
+WantedBy=multi-user.target
