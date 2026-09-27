@@ -1,8 +1,8 @@
 
-# 💳 Credit Card Fraud Detection Using Machine Learning  
+# 💳 Credit Card Fraud Detection Using ML  
 Predicting fraudulent transactions with real-world imbalanced data
 
-Credit card fraud detection is one of the most important real-world applications of machine learning.  
+Credit card fraud detection is one of the most important real-world applications of ML.  
 In this project, we build a complete ML pipeline that identifies fraudulent transactions using the popular **Kaggle Credit Card Fraud dataset** — a highly imbalanced dataset based on real European transactions.
 
 Fraudulent cases represent **only 0.172%** of all samples, making this a perfect demonstration of:
