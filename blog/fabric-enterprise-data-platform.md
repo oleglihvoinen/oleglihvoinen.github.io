@@ -9,27 +9,37 @@ permalink: /blog/fabric-enterprise-data-platform
 
 ![Microsoft Fabric Enterprise Data Platform architecture](/assets/architecture/fabric-enterprise-data-platform.png)
 
-## Goal
+## Executive summary
 
-This reference case models how an enterprise data platform can be organized in **Microsoft Fabric** from ingestion through governed consumption. The design separates raw capture, standardization and business-ready models so that each layer has a clear responsibility and consumers do not depend directly on source-system structures.
+This architecture defines a governed **Microsoft Fabric lakehouse platform** from source ingestion through semantic consumption. The design separates source-fidelity storage, technical standardization, business modeling and semantic delivery so downstream analytics are not coupled directly to operational source structures.
 
-## Architecture
+## Platform architecture
 
-Operational sources such as ERP, CRM, APIs and files enter through **Fabric Data Factory**. Data lands in a **OneLake/Lakehouse Bronze layer** in its source-oriented form. **PySpark and Delta** transformations then build a Silver layer where identifiers, text fields and reference values are standardized and data-quality indicators are added. Gold models expose stable facts, dimensions and aggregates for semantic consumption.
+ERP, CRM, API and file sources enter through **Fabric Data Factory** and land in a **OneLake/Lakehouse Bronze layer**. Bronze preserves source-oriented structure and provides a stable ingestion boundary.
 
-A semantic layer sits above Gold so that Power BI, APIs or governed AI consumers can use consistent measures and business definitions rather than reimplementing logic independently.
+**PySpark and Delta** transformations create the Silver layer, where identifiers, text values and reference fields are standardized and explicit data-quality indicators are applied. Gold models expose business-ready facts, dimensions and aggregates for downstream analytical workloads.
 
-## Engineering decisions demonstrated
+A semantic boundary sits above Gold so Power BI, APIs and governed AI consumers can use shared definitions rather than independently recreating measures and business logic.
 
-The repository contains representative PySpark transformations from Bronze to Silver and from Silver to Gold, plus SQL quality checks. The customer transformation normalizes email and country values, handles required identifiers and adds a quality flag. The Gold example aggregates completed orders into daily sales metrics.
+## Engineering design
 
-The important design choice is **layer responsibility**: Bronze preserves source fidelity, Silver improves technical and data quality consistency, and Gold expresses business-ready analytical models. That makes lineage and troubleshooting clearer and reduces coupling between ingestion and reporting.
+The repository includes representative Bronze-to-Silver and Silver-to-Gold transformations plus post-build SQL checks. The customer pipeline normalizes identifiers, email and country values and adds quality indicators. The Gold pipeline aggregates completed orders into governed daily sales metrics.
 
-## Production evolution
+The architecture enforces clear responsibilities:
 
-A production Fabric implementation would extend the case with watermark/incremental ingestion, retry and idempotency patterns, environment/workspace separation, deployment pipelines, RBAC, sensitivity controls, lineage, monitoring, semantic-model deployment automation and cost/performance governance.
+- **Bronze:** source fidelity and replayability
+- **Silver:** standardization, conformance and technical quality
+- **Gold:** business-ready analytical structures
+- **Semantic layer:** reusable measures, dimensions and definitions
+- **Consumption:** Power BI, APIs and governed AI services
 
-This repository is a **reference implementation** and does not claim that it provisions a live Fabric tenant.
+## Enterprise controls
+
+A production deployment would add watermark-based incremental ingestion, orchestration retries, idempotency controls, deployment pipelines, workspace separation, RBAC, sensitivity labels, lineage, monitoring, semantic-model deployment automation and cost/performance governance.
+
+## Repository scope
+
+The repository implements transformation patterns, quality controls and architecture boundaries. Tenant provisioning and environment-specific Fabric deployment remain external infrastructure responsibilities.
 
 **Technologies:** Microsoft Fabric · OneLake · Lakehouse · Data Factory · PySpark · Delta · SQL · Power BI · semantic models · data quality · CI/CD.
 
