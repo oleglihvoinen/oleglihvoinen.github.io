@@ -86,7 +86,7 @@ We use:
 - `scale_pos_weight = (negative samples / positive samples)`  
 - 500 boosted trees  
 - max depth 4  
-- learning rate 0.05  
+- shrinkage parameter 0.05  
 
 ---
 
@@ -126,7 +126,7 @@ ratio = (len(y_train) - y_train.sum()) / y_train.sum()
 model = XGBClassifier(
     n_estimators=500,
     max_depth=4,
-    learning_rate=0.05,
+    eta=0.05,
     subsample=0.9,
     colsample_bytree=0.9,
     scale_pos_weight=ratio,
