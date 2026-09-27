@@ -69,6 +69,16 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 ---
 
+## C & Linux Systems Engineering
+
+These reference implementations connect low-level systems programming to data engineering and show **C, Linux, POSIX, systemd, Kafka/librdkafka, binary persistence and observability**.
+
+- **[Linux System Metrics Agent](/blog/c-linux-systems-engineering):** A lightweight C/Linux telemetry agent that reads kernel/system interfaces and filesystem statistics, emits structured metrics and includes a systemd service definition. **Technologies:** C, Linux, POSIX, /proc, systemd, JSON, Make.
+- **[C Kafka Telemetry Producer](/blog/c-linux-systems-engineering):** A native librdkafka producer for keyed industrial telemetry events, connecting C systems programming with the Kafka streaming platform. **Technologies:** C, Linux, librdkafka, Apache Kafka, JSON, event streaming.
+- **[Mini Database Storage Engine](/blog/c-linux-systems-engineering):** A compact C implementation of binary record persistence and ID-based lookup for exploring storage-engine/database-internals concepts. **Technologies:** C, Linux, binary files, persistence, systems programming.
+
+[View C & Linux case details](/blog/c-linux-systems-engineering)
+
 ## Data Engineering & Cloud Data Platforms
 
 These cases focus on modern data-platform engineering across **Snowflake, dbt, Python, FastAPI/REST, Apache Kafka, Terraform, GitHub Actions, Docker, MDM, data quality, incremental ELT and Infrastructure as Code**.
@@ -104,6 +114,18 @@ A data engineering project connecting chemical spectroscopy analysis to ERP work
 [Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ---
+
+### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
+A reference **medallion/lakehouse architecture** covering source ingestion, OneLake Bronze, PySpark/Delta Silver transformations, governed Gold models and semantic consumption for Power BI or AI. **Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, Power BI, semantic models.  
+[Read the case study](/blog/fabric-enterprise-data-platform) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/fabric-enterprise-data-platform)
+
+### 🔄 [CDC with Debezium, Kafka & Snowflake](/blog/cdc-kafka-snowflake)
+A change-data-capture architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**, with a local Docker Compose environment and Debezium connector definition. **Technologies:** PostgreSQL, Debezium, Kafka, Docker Compose, CDC, Snowflake, dbt.  
+[Read the case study](/blog/cdc-kafka-snowflake) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/cdc-kafka-snowflake)
+
+### 🧠 [Governed Semantic Layer + AI Data Agent](/blog/semantic-ai-data-agent)
+A governed analytical-AI pattern where approved semantic metric contracts sit between business questions and physical warehouse models. A FastAPI service exposes metric definitions and provenance for constrained AI/data-agent consumption. **Technologies:** Python, FastAPI, REST, YAML semantic contracts, Snowflake/dbt-ready metrics, LLM grounding, provenance, governance.  
+[Read the case study](/blog/semantic-ai-data-agent) · [View implementation](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/semantic-ai-data-agent)
 
 ## AI & Machine Learning Projects
 
