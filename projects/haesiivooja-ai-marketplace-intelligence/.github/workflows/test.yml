@@ -1,0 +1,15 @@
+name: test
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r projects/haesiivooja-ai-marketplace-intelligence/requirements.txt
+      - run: cd projects/haesiivooja-ai-marketplace-intelligence && PYTHONPATH=. pytest -q
+      - run: cd projects/haesiivooja-ai-marketplace-intelligence && python src/generate_marketplace_data.py
+      - run: cd projects/haesiivooja-ai-marketplace-intelligence && python src/feature_pipeline.py
+      - run: cd projects/haesiivooja-ai-marketplace-intelligence && python ml/train_models.py
