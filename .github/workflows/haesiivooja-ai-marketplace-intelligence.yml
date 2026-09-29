@@ -1,0 +1,29 @@
+name: HaeSiivooja AI Marketplace Intelligence
+
+on:
+  push:
+    paths:
+      - 'projects/haesiivooja-ai-marketplace-intelligence/**'
+      - '.github/workflows/haesiivooja-ai-marketplace-intelligence.yml'
+  pull_request:
+    paths:
+      - 'projects/haesiivooja-ai-marketplace-intelligence/**'
+      - '.github/workflows/haesiivooja-ai-marketplace-intelligence.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/haesiivooja-ai-marketplace-intelligence
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: PYTHONPATH=. pytest -q
+      - run: python src/generate_marketplace_data.py
+      - run: python src/feature_pipeline.py
+      - run: python ml/train_models.py
+      - run: python -m py_compile src/*.py ml/*.py api/*.py
