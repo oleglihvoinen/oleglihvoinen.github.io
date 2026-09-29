@@ -7,6 +7,8 @@ permalink: /blog/haesiivooja-ai-marketplace-intelligence
 
 **Role focus:** Data Engineering · Applied AI · Marketplace Analytics · Data Products · SaaS Architecture
 
+## Architecture
+
 ![HaeSiivooja AI Marketplace Intelligence architecture](/assets/architecture/haesiivooja-ai-marketplace-intelligence.svg)
 
 ## Summary
@@ -105,14 +107,6 @@ The public project deliberately excludes:
 
 A production implementation should pseudonymize analytical identities, separate PII from behavioral/transactional data, enforce role-based access, define retention rules and support GDPR data-subject workflows.
 
-## Why this case has high value
-
-This project connects several areas that are usually shown separately in portfolios:
-
-**SaaS transactional architecture → CDC/event design → data products → governed metrics → feature engineering → predictive AI → ranking → REST decision services → web/mobile integration.**
-
-That combination is directly relevant to modern **Senior Data Engineer, Data Architect, AI Engineer and data-platform roles**, because the challenge is not merely training a model—it is creating a reliable system around the model.
-
 **Technologies:** Python · Pandas · scikit-learn · FastAPI · Pydantic · demand forecasting · ranking · feature engineering · semantic metrics · marketplace analytics · CI/CD · MySQL CDC · Debezium/Kafka · Snowflake/dbt · Microsoft Fabric/OneLake architecture.
 
-[View the implementation on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/haesiivooja-ai-marketplace-intelligence)
+[View the implementation on GitHub](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence)
