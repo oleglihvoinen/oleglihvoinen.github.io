@@ -9,7 +9,7 @@ permalink: /blog/haesiivooja-ai-marketplace-intelligence
 
 ## Architecture
 
-![HaeSiivooja AI Marketplace Intelligence architecture](https://raw.githubusercontent.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence/main/docs/architecture.png)
+![HaeSiivooja AI Marketplace Intelligence architecture](https://raw.githubusercontent.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence/main/docs/architecture-v2.png)
 
 [Open architecture PNG](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence/blob/main/docs/architecture.png)
 
