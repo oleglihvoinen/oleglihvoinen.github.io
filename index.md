@@ -28,7 +28,7 @@ A Finnish **SaaS marketplace** connecting customers and cleaning professionals t
 An end-to-end **AI + data engineering platform** built around the real HaeSiivooja marketplace domain. It transforms booking, availability, service, pricing and quality signals into governed data products, city/service demand forecasts and cleaner-ranking decisions exposed through FastAPI. The public implementation uses synthetic/anonymized data while preserving the production domain model and maps naturally to MySQL CDC, Kafka, Snowflake/dbt or Microsoft Fabric.
 
 **Technologies:** Python, Pandas, scikit-learn, FastAPI, feature engineering, demand forecasting, ranking, semantic metrics, marketplace analytics, CI/CD, MySQL CDC, Debezium/Kafka, Snowflake/dbt, Microsoft Fabric.  
-[Read the case study](/blog/haesiivooja-ai-marketplace-intelligence) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/haesiivooja-ai-marketplace-intelligence)
+[Read the case study](/blog/haesiivooja-ai-marketplace-intelligence) · [View source on GitHub](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence)
 
 ### 🧭 [Master Data Management Tool](/blog/master-data-management)
 A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing and harmonisation.
