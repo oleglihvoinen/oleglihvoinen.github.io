@@ -24,10 +24,10 @@ A Finnish **SaaS marketplace** connecting customers and cleaning professionals t
 
 [Visit HaeSiivooja](https://haesiivooja.fi/)
 
-### 🤖 [HaeSiivooja AI Marketplace Intelligence Platform](/blog/haesiivooja-ai-marketplace-intelligence)
-An end-to-end **AI + data engineering platform** built around the real HaeSiivooja marketplace domain. It transforms booking, availability, service, pricing and quality signals into governed data products, city/service demand forecasts and cleaner-ranking decisions exposed through FastAPI. The public implementation uses synthetic/anonymized data while preserving the production domain model and maps naturally to MySQL CDC, Kafka, Snowflake/dbt or Microsoft Fabric.
+### 🤖 [HaeSiivooja Real-Time Marketplace Intelligence & AI Decision Platform](/blog/haesiivooja-ai-marketplace-intelligence)
+A **real-time data engineering and AI decision platform** built around the HaeSiivooja web/mobile SaaS domain. The architecture connects MySQL operational changes through Debezium CDC and Kafka to governed Bronze/Silver/Gold data products, forecasting, cleaner ranking, semantic metrics and recommendation-only operational decisions with policy and human-approval controls. Outcome events complete the feedback loop from marketplace activity back to measurable decision quality.
 
-**Technologies:** Python, Pandas, scikit-learn, FastAPI, feature engineering, demand forecasting, ranking, semantic metrics, marketplace analytics, CI/CD, MySQL CDC, Debezium/Kafka, Snowflake/dbt, Microsoft Fabric.  
+**Technologies:** Python, Pandas, scikit-learn, FastAPI, MySQL, Debezium CDC, Apache Kafka, Bronze/Silver/Gold data products, feature engineering, demand forecasting, ranking, decision intelligence, semantic governance, CI/CD, Snowflake/dbt, Microsoft Fabric.  
 [Read the case study](/blog/haesiivooja-ai-marketplace-intelligence) · [View source on GitHub](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence)
 
 ### 🧭 [Master Data Management Tool](/blog/master-data-management)
