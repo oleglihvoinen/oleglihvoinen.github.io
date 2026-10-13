@@ -5,44 +5,55 @@ permalink: /blog/cdc-kafka-snowflake
 ---
 # CDC with Debezium, Kafka & Snowflake
 
-**Role focus:** Data Engineering · Streaming · Change Data Capture · Analytics Engineering
+**Role focus:** Data Engineering · Streaming · CDC Correctness · Replay · Analytics Engineering
 
 ![CDC Kafka Snowflake architecture](/assets/architecture/cdc-kafka-snowflake-pipeline.png)
 
 ## Summary
 
-This architecture implements **change data capture** from PostgreSQL into an analytical platform without recurring full-table extraction. The end-to-end flow is:
+This case implements PostgreSQL WAL → Debezium → Kafka → Snowflake/dbt CDC with an emphasis on **state correctness under duplicates, deletes, replay and out-of-order delivery**.
 
-**PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt staging/current-state models**
+## Source capture and streaming
 
-The design separates operational change capture, durable event transport, immutable raw storage and analytical state reconstruction.
+The Docker environment runs PostgreSQL with logical replication, Kafka and Debezium. Database inserts, updates and deletes become structured CDC events instead of periodic full-table extracts.
 
-## Source capture
+Kafka supplies durable event positions and replay.
 
-The Docker Compose environment starts PostgreSQL, Kafka and Debezium. PostgreSQL runs with logical replication enabled and includes operational customer and order tables.
+## Source and transport lineage
 
-A Debezium PostgreSQL connector consumes the write-ahead log and converts insert, update and delete operations into structured change events. This approach moves extraction from scheduled table scans to transaction-log-driven event capture.
+The analytical event model retains:
 
-## Streaming and lineage
+- Debezium operation type
+- source LSN
+- event timestamp
+- Kafka partition
+- Kafka offset
+- deterministic event ID
 
-Kafka provides the durable event layer through topics, partitions, offsets and replay. The Snowflake RAW design retains Kafka topic, partition and offset metadata alongside the event payload.
+This lets the downstream model reason about source order rather than assuming arrival order is correct.
 
-That metadata creates a strong operational lineage model for troubleshooting, replay analysis, deduplication and idempotent ingestion.
+## Delete-aware staging
 
-## dbt transformation layer
+Debezium delete events have a null after-image. The staging model therefore resolves the order key and other trace fields from the before-image when necessary.
 
-The staging model extracts typed fields from the Debezium envelope. An incremental current-state model then resolves the latest event for each order while respecting delete operations.
+Without that handling, deletes can disappear during analytical reconstruction.
 
-This preserves an important architectural distinction: **RAW retains change history; dbt derives consumer-facing state**.
+## Replay-safe current state
 
-## Reliability and enterprise controls
+The incremental current-state model deliberately reprocesses a bounded overlap interval. Within each business key, events are ranked by source LSN, event time and Kafka offset.
 
-A production deployment would add managed Snowflake ingestion or Kafka Connect configuration, Schema Registry, SASL/TLS, secret management, connector observability, dead-letter handling, source schema-evolution policy, freshness SLAs, idempotency controls and end-to-end operational monitoring.
+A Python reducer independently models the same correctness rules and is tested for:
 
-## Repository scope
+- duplicate events
+- out-of-order events
+- deletes
+- replay
+- deterministic transport/source identity
 
-The PostgreSQL, Kafka and Debezium components are directly runnable through Docker Compose. Snowflake integration is represented through table design and dbt models and requires environment-specific credentials and services.
+## Separation of history and state
 
-**Technologies:** PostgreSQL · WAL · Debezium · Apache Kafka · Docker Compose · Snowflake · dbt · SQL · CDC · incremental ELT.
+Snowflake RAW retains event history and lineage. dbt derives consumer-facing current state from that immutable history. This preserves replay and investigation capability instead of overwriting the only copy of a change.
+
+**Technologies:** PostgreSQL · WAL · Debezium · Apache Kafka · Docker Compose · Snowflake · dbt · Python · CDC · replay · idempotency · incremental ELT
 
 [View the standalone implementation on GitHub](https://github.com/oleglihvoinen/cdc-kafka-snowflake-pipeline)
