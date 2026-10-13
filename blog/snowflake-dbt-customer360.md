@@ -5,43 +5,67 @@ permalink: /blog/snowflake-dbt-customer360
 ---
 # Snowflake + dbt Customer 360
 
-**Role focus:** Data Engineering · MDM · REST API · Data Quality · Data Architecture
+**Role focus:** Data Engineering · MDM · Entity Resolution · Data Quality · Data Products
 
-This portfolio case shows how fragmented customer records from CRM and ERP systems can be transformed into a governed Customer 360 model in Snowflake using dbt.
+## Summary
 
-## Challenge
-Enterprise customer data commonly contains duplicated identities, inconsistent formats and conflicting attributes. A useful analytical customer view therefore needs more than ingestion: it needs explicit standardization, matching, survivorship and quality rules.
+This case implements a governed Customer 360 pattern for fragmented CRM and ERP identities. It now goes beyond simple normalized joins: matching decisions are explainable, ambiguous identities can be routed to stewardship, survivorship happens at field level, and the source of each surviving attribute remains visible.
 
-## Solution
-The pipeline separates raw source data from staging, identity resolution and the final golden customer dimension.
+## Architecture
 
 ```text
 CRM ─┐
-     ├─> Snowflake RAW -> dbt staging -> identity resolution
+     ├─> Snowflake RAW -> dbt staging -> match candidates
 ERP ─┘                                      |
+                                             +-> exact/fuzzy evidence
+                                             +-> conflict rules
+                                             +-> stewardship queue
+                                             |
                                              v
-                                   survivorship rules
+                                    entity clusters
+                                             |
+                                    field survivorship
                                              |
                                              v
                                       DIM_CUSTOMER
                                              |
-                                      BI / AI / APIs
+                                  BI / APIs / governed AI
 ```
 
-The staging layer normalizes customer names, email addresses, phone numbers and country codes. The intermediate model builds a cross-source identity key and ranks competing records using explicit source precedence and recency. The mart publishes one governed customer record per resolved identity.
+## Entity resolution
 
-## Engineering decisions
-The implementation keeps source-specific cleanup in staging and business identity logic in the intermediate layer. This makes lineage easier to inspect and lets matching rules evolve without coupling them to source ingestion. dbt tests protect the published customer key from nulls and duplicates.
+The repository contains a Python entity-resolution engine alongside the dbt transformation layer.
 
-In a production implementation I would extend this baseline with probabilistic matching where appropriate, SCD2 history, exception queues, stewardship workflows, source freshness SLAs and richer observability.
+It combines exact email/phone evidence with normalized name similarity and country agreement. Each comparison returns explicit reasons and one of three decisions:
 
-## REST data-product layer
+- **match** — safe for automatic clustering
+- **review** — ambiguous enough for stewardship
+- **reject** — evidence is insufficient or strong identifiers conflict
 
-A **Python FastAPI** service now exposes the governed Snowflake customer mart through versioned REST endpoints for customer lookup, search and record-level quality status. FastAPI provides the OpenAPI contract, while a Dockerfile packages the service for repeatable deployment. Warehouse credentials stay in environment variables rather than source control.
+Conflicting email **and** phone values prevent silent auto-merge even when names look similar.
 
-This demonstrates how a dbt/Snowflake model can become a reusable **data product** consumed by applications or AI services without exposing physical warehouse tables directly.
+## Field-level survivorship
 
-## Technologies
-**Snowflake · dbt · SQL · Python · FastAPI · REST API · OpenAPI · Docker · MDM · dimensional modeling · data quality · Git**
+Instead of selecting one entire source record as the winner, survivorship is evaluated per attribute. For example, the CRM may supply the surviving name while ERP supplies the surviving email.
+
+The resulting golden record includes field provenance so downstream users can see where each value came from.
+
+## Policy as code
+
+`config/mdm_policy.yml` defines auto-match/review thresholds, strong identifiers, source priority, tie-breaking and expected outputs. This separates MDM policy from implementation code and makes changes reviewable.
+
+## Stewardship and tests
+
+Ambiguous candidates are exposed as a stewardship exception queue rather than being silently merged. Automated tests cover:
+
+- exact cross-system matching
+- strong-identifier conflicts
+- stewardship review routing
+- field-level survivorship
+- transitive entity clustering
+
+The dbt layer still provides source normalization, golden customer publishing, tests and history, while the FastAPI layer exposes the governed customer data product.
+
+**Technologies:** Snowflake · dbt · SQL · Python · MDM · entity resolution · survivorship · stewardship · data quality · FastAPI · Docker · CI/CD
 
 [View the public source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
