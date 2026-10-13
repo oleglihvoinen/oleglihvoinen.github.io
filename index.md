@@ -80,27 +80,27 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 These cases show a broader **enterprise data-platform engineering** stack: Snowflake and dbt ELT, Microsoft Fabric/OneLake lakehouse patterns, Python/FastAPI data products, Kafka streaming and CDC, Terraform Infrastructure as Code, GitHub Actions, Docker, MDM/data quality, semantic governance and AI-ready data services.
 
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
-A governed **Customer 360 data product** that standardizes CRM and ERP customer data, resolves identities and publishes a golden customer dimension. A **Python FastAPI REST layer** exposes governed customer and data-quality endpoints from Snowflake, with OpenAPI documentation and Docker packaging. The implementation also includes synthetic data, dbt tests, snapshots, macros and architecture documentation.
+A governed **Customer 360 / MDM data product** with explainable entity resolution, match/review/reject evidence, conflict detection, transitive clustering, field-level survivorship, attribute provenance and a stewardship exception queue. dbt publishes the governed Snowflake customer model while Python tests validate identity and survivorship behavior.
 
-**Technologies:** Snowflake, dbt, SQL, Python, FastAPI, REST API, OpenAPI, Docker, MDM, data quality, dimensional modeling.  
+**Technologies:** Snowflake, dbt, SQL, Python, MDM, entity resolution, survivorship, stewardship, data quality, FastAPI, Docker, CI/CD.  
 [Read the case study](/blog/snowflake-dbt-customer360) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-customer360)
 
 ### 🌊 [Kafka + Terraform Streaming Data Platform](/blog/kafka-terraform-streaming-platform)
-An event-driven data pipeline using **Apache Kafka, Python and Terraform**, with a versioned order-event producer, consumer-group processing, explicit offset handling and Infrastructure as Code for managed Kafka resources. The architecture is designed for streaming ingestion into Snowflake and downstream dbt models.
+A standalone streaming platform with a **versioned JSON event contract, idempotent producer, manual-commit consumer, replay-safe transport identity and dead-letter handling**. Terraform defines provider-neutral topic policy for partitions, retention and minimum in-sync replicas, while CI validates Python behavior and Terraform configuration.
 
-**Technologies:** Apache Kafka, Terraform, Python, event streaming, Infrastructure as Code, Snowflake integration, Git, CI/CD.  
-[Read the case study](/blog/kafka-terraform-streaming-platform) · [View source on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/kafka-terraform-streaming-platform)
+**Technologies:** Apache Kafka, confluent-kafka, Python, Terraform, JSON Schema, DLQ, idempotency, manual commits, CI/CD, Snowflake/Fabric-ready streaming.  
+[Read the case study](/blog/kafka-terraform-streaming-platform) · [View source on GitHub](https://github.com/oleglihvoinen/kafka-terraform-streaming-platform)
 
 ### 🏔️ [Modern Snowflake + dbt ELT Analytics Platform](/blog/snowflake-dbt-analytics-platform)
-A layered **RAW → staging → intermediate → marts** architecture for turning operational data into analytics-ready Snowflake models, including incremental fact processing designed for scalable ELT workloads.
+A layered Snowflake/dbt ELT platform hardened for **late-arriving data, overlap replay, idempotent MERGE behavior and source/target reconciliation**. The case adds deterministic payload hashes, pipeline-run audit tables, data-quality exceptions and automated tests for watermark and state-management behavior.
 
-**Technologies:** Snowflake, dbt, SQL, ELT, dimensional modeling, incremental processing.  
+**Technologies:** Snowflake, dbt, SQL, Python, incremental ELT, MERGE, watermarks, reconciliation, dimensional modeling, CI/CD.  
 [Read the case study](/blog/snowflake-dbt-analytics-platform) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-analytics-platform)
 
-### ⚙️ [Snowflake + dbt CI/CD](/blog/snowflake-dbt-cicd)
-A production-oriented delivery pattern for Snowflake transformations using **GitHub Actions and dbt**, with automated builds and data tests, secret-based credentials and a Git-based promotion workflow.
+### ⚙️ [Snowflake + dbt Release Engineering](/blog/snowflake-dbt-cicd)
+A governed release pipeline for Snowflake/dbt with **SQL policy-as-code, policy unit tests, dbt PR validation, retained build artifacts and exact-SHA production promotion through a protected environment**. It demonstrates data-platform release controls rather than a single build command.
 
-**Technologies:** Snowflake, dbt, GitHub Actions, CI/CD, SQL, DevOps.  
+**Technologies:** Snowflake, dbt, GitHub Actions, Python, SQL policy-as-code, CI/CD, release governance, DevOps.  
 [Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
 
 ### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
@@ -112,26 +112,22 @@ A data engineering project connecting chemical spectroscopy analysis to ERP work
 ---
 
 ### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
-An enterprise **medallion/lakehouse platform** showing how ERP, CRM, APIs and files move through Data Factory into OneLake/Lakehouse Bronze, then through PySpark/Delta standardization and data-quality processing into Silver and governed Gold models. A semantic-consumption boundary is designed for Power BI, APIs and governed AI.
+An enterprise Fabric medallion/lakehouse platform with an explicit **incremental control plane**. Durable watermarks advance only after successful completion; failed intervals remain replayable; row accounting, quarantine, run audit and retry decisions are represented as testable pipeline state transitions.
 
-**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, Power BI, semantic models, data quality, CI/CD.  
+**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, watermarks, quarantine, pipeline audit, Power BI, CI/CD.  
 [Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
 
 ### 🔄 [CDC with Debezium, Kafka & Snowflake](/blog/cdc-kafka-snowflake)
-An end-to-end CDC architecture using **PostgreSQL WAL → Debezium → Kafka → Snowflake RAW → dbt**. The repository includes a runnable local PostgreSQL/Kafka/Debezium environment, sample operational tables, a connector definition, a Snowflake raw-event model retaining Kafka lineage metadata, and dbt models for typed staging and incremental current-state analytics.
+A CDC platform focused on **correct state reconstruction under duplicates, deletes, replay and out-of-order delivery**. Debezium source LSN and Kafka positions are retained, delete before-images are handled explicitly, current state is derived from immutable history, and a production Snowflake MERGE pattern includes explicit DELETE behavior.
 
-**Technologies:** PostgreSQL, WAL, Debezium, Apache Kafka, Docker Compose, Snowflake, dbt, SQL, CDC, incremental ELT.  
+**Technologies:** PostgreSQL, WAL, Debezium, Apache Kafka, Docker Compose, Snowflake, dbt, Python, CDC, replay, idempotency, incremental ELT.  
 [Read the case study](/blog/cdc-kafka-snowflake) · [View source on GitHub](https://github.com/oleglihvoinen/cdc-kafka-snowflake-pipeline)
 
 ### 🧠 [Governed Semantic Layer + AI Data Agent](/blog/semantic-ai-data-agent)
-A governed analytical-AI pattern that places **approved metric and dimension contracts between natural-language questions and physical warehouse models**. The FastAPI layer publishes governed metrics, validates requested dimensions and returns ownership/provenance, creating a controlled boundary for future Snowflake/dbt or Fabric-backed AI agents instead of unrestricted LLM-to-database access.
+A governed analytical-AI boundary with **machine-readable semantic contracts, natural-language tool routing, ambiguity handling, allowed-dimension enforcement, golden-question evaluation and tamper-evident audit records**. The agent can prepare only approved semantic plans rather than inventing warehouse logic.
 
-**Technologies:** Python, FastAPI, REST, Pydantic, YAML semantic contracts, Snowflake/dbt-ready metrics, Microsoft Fabric-ready semantics, LLM grounding, provenance, governance, Docker, CI.  
+**Technologies:** Python, FastAPI, Pydantic, YAML semantic contracts, governed tool routing, evaluation, audit chain, Snowflake/dbt-ready semantics, Microsoft Fabric-ready semantics, Docker, CI.  
 [Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
-
-## C & Linux Systems Engineering
-
-These projects demonstrate **systems-level engineering beneath the cloud and analytics stack**: direct Linux kernel interfaces, native C services, Kafka event publishing and database-storage fundamentals. Each case is implemented with source code, build automation and explicit operational considerations.
 
 ### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
 A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
