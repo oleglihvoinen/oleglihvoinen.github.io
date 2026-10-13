@@ -5,41 +5,72 @@ permalink: /blog/kafka-terraform-streaming-platform
 ---
 # Kafka + Terraform Streaming Data Platform
 
-**Role focus:** Data Engineering · Streaming · Infrastructure as Code · Cloud Data Platform
+**Role focus:** Data Engineering · Streaming · Infrastructure as Code · Reliability
 
-This portfolio case demonstrates an event-driven data pipeline using **Apache Kafka, Python and Terraform**, designed as a streaming ingestion path toward Snowflake.
+## Summary
+
+This case is now a standalone event-streaming platform rather than a minimal producer/consumer example. It focuses on the operational guarantees that make Kafka useful in a data platform: event contracts, partitioning, producer acknowledgements, manual offset commits, replay safety, dead-letter handling and infrastructure policy.
 
 ## Architecture
 
 ```text
-Order/API producer
-       |
-       v
- Kafka topic: orders.v1
-       |
-       v
- consumer group
-       |
- validation / transformation
-       |
-       v
- Snowflake RAW
-       |
-   dbt models
-       |
- analytics / APIs / AI
+Order/API producers
+        |
+        v
+    orders.v1
+        |
+        +----> validated consumer group ----> Snowflake / Fabric sink
+        |                 |
+        |                 +----> orders.dlq.v1
+        |
+        +----> independent operational / fraud consumers
+
+Terraform -> topic contract, partitions, retention and environment configuration
 ```
 
-Terraform defines the managed Kafka environment, cluster and topic as version-controlled infrastructure. The Python producer emits versioned JSON order events, while the consumer validates messages and controls offset commits after accepted processing.
+## Event contract
 
-## Engineering concepts demonstrated
+A versioned JSON Schema defines the `orders.v1` payload. Unknown fields are rejected so accidental schema expansion does not silently become part of the contract.
 
-**Kafka:** topics, partitions, producers, consumer groups, event keys, offsets and explicit commits.
+The producer validates the event before publish and uses the business order ID as the Kafka key, supporting stable per-order partitioning and ordering.
 
-**Terraform:** Infrastructure as Code, providers, resources, variables and repeatable environment provisioning.
+## Delivery and replay behavior
 
-**Data engineering:** event contracts, validation, decoupled ingestion, downstream Snowflake integration and an architecture that can support additional consumers such as fraud detection or operational analytics.
+The producer enables Kafka idempotence and `acks=all`.
 
-**Technologies:** Apache Kafka · Terraform · Python · Confluent Kafka client · event streaming · Infrastructure as Code · Snowflake-ready integration · Git · CI/CD.
+The consumer disables automatic commits. A message is committed only after one of two controlled outcomes:
 
-[View the public implementation on GitHub](https://github.com/oleglihvoinen/oleglihvoinen.github.io/tree/main/projects/kafka-terraform-streaming-platform)
+- successful processing, or
+- successful publication of a dead-letter envelope for an invalid record.
+
+The transport identity `topic:partition:offset` is used as an idempotency key so replay decisions are explicit.
+
+## Dead-letter handling
+
+Invalid JSON or contract violations produce a DLQ record that preserves:
+
+- source topic
+- partition
+- offset
+- idempotency key
+- validation error
+- original payload
+
+That makes failures diagnosable and replayable instead of disappearing in logs.
+
+## Terraform
+
+Terraform defines a provider-neutral topic contract for the main and DLQ topics, including partition count, retention and minimum in-sync replica expectations. Environment-specific modules can map the same contract to Confluent Cloud, AWS MSK or another managed Kafka service.
+
+## CI
+
+GitHub Actions validates:
+
+- Python behavior with pytest
+- event contract logic
+- Terraform formatting
+- Terraform configuration validity
+
+**Technologies:** Apache Kafka · confluent-kafka · Python · Terraform · JSON Schema · DLQ · idempotency · manual commits · CI/CD · Snowflake/Fabric-ready streaming
+
+[View the standalone implementation on GitHub](https://github.com/oleglihvoinen/kafka-terraform-streaming-platform)
