@@ -42,6 +42,8 @@ Without that handling, deletes can disappear during analytical reconstruction.
 
 The incremental current-state model deliberately reprocesses a bounded overlap interval. Within each business key, events are ranked by source LSN, event time and Kafka offset.
 
+The public dbt current-state model is a delete-correct view over immutable history. For a materialized Snowflake current-state table, the repository includes an explicit `MERGE` pattern with `WHEN MATCHED ... THEN DELETE` and source-position checks.
+
 A Python reducer independently models the same correctness rules and is tested for:
 
 - duplicate events
