@@ -79,6 +79,12 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 These cases show a broader **enterprise data-platform engineering** stack: Microsoft Fabric/OneLake, Snowflake and dbt, Kafka/CDC, Terraform Infrastructure as Code, MDM/data quality, semantic governance, APIs and production-oriented CI/CD controls.
 
+### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
+An enterprise Fabric medallion/lakehouse platform with an explicit **incremental control plane**. Durable watermarks advance only after successful completion; failed intervals remain replayable; row accounting, quarantine, run audit and retry decisions are represented as testable pipeline state transitions.
+
+**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, watermarks, quarantine, pipeline audit, Power BI, CI/CD.  
+[Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
+
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
 A governed **Customer 360 / MDM data product** with explainable entity resolution, match/review/reject evidence, conflict detection, transitive clustering, field-level survivorship, attribute provenance and a stewardship exception queue. dbt publishes the governed Snowflake customer model while Python tests validate identity and survivorship behavior.
 
@@ -114,12 +120,6 @@ A governed analytical-AI boundary with **machine-readable semantic contracts, na
 
 **Technologies:** Python, FastAPI, Pydantic, YAML semantic contracts, governed tool routing, evaluation, audit chain, Snowflake/dbt-ready semantics, Microsoft Fabric-ready semantics, Docker, CI.  
 [Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
-
----
-
-## C & Linux Systems Engineering
-
-These projects group the systems-level work behind the data-platform portfolio: direct Linux interfaces, native C services, Kafka publishing and storage-engine fundamentals.
 
 ---
 
@@ -169,6 +169,12 @@ These projects apply retrieval, predictive modeling and language-model integrati
 ---
 
 ## Industrial Data & AI
+
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
+A data engineering and applied ML project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
+
+**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
+[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ## About Me
 
