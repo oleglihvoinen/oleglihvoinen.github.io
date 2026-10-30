@@ -19,10 +19,10 @@ I design data solutions around clear contracts, reliable pipelines, governed bus
 
 ## Selected Work
 
-### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](https://haesiivooja.fi/)
-A Finnish **SaaS marketplace** connecting customers and cleaning professionals through a digital service. Customers can discover cleaners, view pricing and arrange bookings; cleaners can create profiles, set availability and prices, and receive work opportunities. The platform includes a web presence and **Android and iOS mobile apps developed with Kotlin and Swift**.
+### 📱 [HaeSiivooja — SaaS Marketplace, Mobile Apps & AI Search](/blog/haesiivooja-saas-marketplace)
+A Finnish **cleaning-services SaaS product ecosystem** combining a customer/provider marketplace, native **Android (Kotlin) and iOS (Swift)** applications, and an **AI-powered cleaning company search in Finland** at [app.haesiivooja.fi](https://app.haesiivooja.fi/). The flagship case also links the product domain to the companion real-time marketplace intelligence and AI decision platform.
 
-[Visit HaeSiivooja](https://haesiivooja.fi/)
+[Read the flagship case](/blog/haesiivooja-saas-marketplace) · [Visit HaeSiivooja](https://haesiivooja.fi/) · [Open AI search](https://app.haesiivooja.fi/)
 
 ### 🤖 [HaeSiivooja Real-Time Marketplace Intelligence & AI Decision Platform](/blog/haesiivooja-ai-marketplace-intelligence)
 A **real-time data engineering and AI decision platform** built around the HaeSiivooja web/mobile SaaS domain. The architecture connects MySQL operational changes through Debezium CDC and Kafka to governed Bronze/Silver/Gold data products, forecasting, cleaner ranking, semantic metrics and recommendation-only operational decisions with policy and human-approval controls. Outcome events complete the feedback loop from marketplace activity back to measurable decision quality.
@@ -77,7 +77,13 @@ A database-backed vehicle marketplace built with Oracle APEX. Registered users c
 
 ## Data Engineering & Cloud Data Platforms
 
-These cases show a broader **enterprise data-platform engineering** stack: Snowflake and dbt ELT, Microsoft Fabric/OneLake lakehouse patterns, Python/FastAPI data products, Kafka streaming and CDC, Terraform Infrastructure as Code, GitHub Actions, Docker, MDM/data quality, semantic governance and AI-ready data services.
+These cases show a broader **enterprise data-platform engineering** stack: Microsoft Fabric/OneLake, Snowflake and dbt, Kafka/CDC, Terraform Infrastructure as Code, MDM/data quality, semantic governance, APIs and production-oriented CI/CD controls.
+
+### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
+An enterprise Fabric medallion/lakehouse platform with an explicit **incremental control plane**. Durable watermarks advance only after successful completion; failed intervals remain replayable; row accounting, quarantine, run audit and retry decisions are represented as testable pipeline state transitions.
+
+**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, watermarks, quarantine, pipeline audit, Power BI, CI/CD.  
+[Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
 
 ### ❄️ [Snowflake + dbt Customer 360](/blog/snowflake-dbt-customer360)
 A governed **Customer 360 / MDM data product** with explainable entity resolution, match/review/reject evidence, conflict detection, transitive clustering, field-level survivorship, attribute provenance and a stewardship exception queue. dbt publishes the governed Snowflake customer model while Python tests validate identity and survivorship behavior.
@@ -103,20 +109,6 @@ A governed release pipeline for Snowflake/dbt with **SQL policy-as-code, policy 
 **Technologies:** Snowflake, dbt, GitHub Actions, Python, SQL policy-as-code, CI/CD, release governance, DevOps.  
 [Read the case study](/blog/snowflake-dbt-cicd) · [View source on GitHub](https://github.com/oleglihvoinen/snowflake-dbt-cicd)
 
-### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
-
-**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
-[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
-
----
-
-### 🏢 [Microsoft Fabric Enterprise Data Platform](/blog/fabric-enterprise-data-platform)
-An enterprise Fabric medallion/lakehouse platform with an explicit **incremental control plane**. Durable watermarks advance only after successful completion; failed intervals remain replayable; row accounting, quarantine, run audit and retry decisions are represented as testable pipeline state transitions.
-
-**Technologies:** Microsoft Fabric, OneLake, Lakehouse, Data Factory, PySpark, Delta, SQL, watermarks, quarantine, pipeline audit, Power BI, CI/CD.  
-[Read the case study](/blog/fabric-enterprise-data-platform) · [View source on GitHub](https://github.com/oleglihvoinen/fabric-enterprise-data-platform)
-
 ### 🔄 [CDC with Debezium, Kafka & Snowflake](/blog/cdc-kafka-snowflake)
 A CDC platform focused on **correct state reconstruction under duplicates, deletes, replay and out-of-order delivery**. Debezium source LSN and Kafka positions are retained, delete before-images are handled explicitly, current state is derived from immutable history, and a production Snowflake MERGE pattern includes explicit DELETE behavior.
 
@@ -128,6 +120,12 @@ A governed analytical-AI boundary with **machine-readable semantic contracts, na
 
 **Technologies:** Python, FastAPI, Pydantic, YAML semantic contracts, governed tool routing, evaluation, audit chain, Snowflake/dbt-ready semantics, Microsoft Fabric-ready semantics, Docker, CI.  
 [Read the case study](/blog/semantic-ai-data-agent) · [View source on GitHub](https://github.com/oleglihvoinen/semantic-ai-data-agent)
+
+---
+
+## C & Linux Systems Engineering
+
+These projects group the systems-level work behind the data-platform portfolio: direct Linux interfaces, native C services, Kafka publishing and storage-engine fundamentals.
 
 ### 🐧 [Linux System Metrics Agent](/blog/c-linux-systems-engineering)
 A lightweight C/Linux observability agent that reads CPU, memory, filesystem and network telemetry directly from Linux interfaces such as `/proc` and `statvfs()`. It emits structured JSONL and includes a hardened systemd service, making the collection layer suitable for connection to Kafka, OpenTelemetry or another monitoring/data pipeline.
@@ -167,6 +165,16 @@ These projects apply retrieval, predictive modeling and language-model integrati
 - **[Loan Default Probability Prediction](/blog/loan-default-prediction.html):** A credit-risk modeling workflow with preprocessing, feature encoding and ROC-AUC evaluation.
 - **[Bitcoin Price Prediction](/blog/bitcoin-price-prediction-ml.html):** Time-series experiments using LSTM and Random Forest models with technical indicators.
 - **[Titanic Survival Prediction](/blog/titanic.html):** A Kaggle-based XGBoost project covering data cleaning, preprocessing, feature engineering and tabular classification.
+
+---
+
+## Industrial Data & AI
+
+### 🔬 [FTIR Spectroscopy Integration with ERP Systems](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
+A data engineering project connecting chemical spectroscopy analysis to ERP workflows for material verification. It covers spectral preprocessing, PCA visualization, anomaly detection and PASS/FAIL decisions exposed through a REST API for use in batch records.
+
+**Technologies:** Python, NumPy, Pandas, SciPy, scikit-learn, FastAPI.  
+[Read the project](/blog/integrating-ftir-spectroscopy-data-into-erp-workflows.html)
 
 ---
 
