@@ -17,24 +17,49 @@ I design data solutions around clear contracts, reliable pipelines, governed bus
 
 ---
 
-## Selected Work
+## MDM & Data Governance
 
-### 📱 [HaeSiivooja — SaaS Marketplace, Mobile Apps & AI Search](/blog/haesiivooja-saas-marketplace)
-A Finnish **cleaning-services SaaS product ecosystem** combining a customer/provider marketplace, native **Android (Kotlin) and iOS (Swift)** applications, and an **AI-powered cleaning company search in Finland** at [app.haesiivooja.fi](https://app.haesiivooja.fi/). The flagship case also links the product domain to the companion real-time marketplace intelligence and AI decision platform.
+My enterprise data work focuses on **master data management, governance, lineage, data quality and change impact**: understanding what data means, who owns it, how it moves, and what downstream systems are affected when it changes.
 
-[Read the flagship case](/blog/haesiivooja-saas-marketplace) · [Visit HaeSiivooja](https://haesiivooja.fi/) · [Open AI search](https://app.haesiivooja.fi/)
+### 🧩 [Cascadary — Enterprise Data Intelligence & Change Impact](https://cascadary.com/)
+A self-hosted **enterprise data governance and change-intelligence platform** for cataloging data assets, exploring lineage, detecting schema drift, assessing downstream change impact, managing glossary terms and policies, tracking data-quality controls, approvals, scans and audit history. Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors and is designed to make enterprise data changes easier to understand before they affect downstream consumers.
 
-### 🤖 [HaeSiivooja Real-Time Marketplace Intelligence & AI Decision Platform](/blog/haesiivooja-ai-marketplace-intelligence)
-A **real-time data engineering and AI decision platform** built around the HaeSiivooja web/mobile SaaS domain. The architecture connects MySQL operational changes through Debezium CDC and Kafka to governed Bronze/Silver/Gold data products, forecasting, cleaner ranking, semantic metrics and recommendation-only operational decisions with policy and human-approval controls. Outcome events complete the feedback loop from marketplace activity back to measurable decision quality.
-
-**Technologies:** Python, Pandas, scikit-learn, FastAPI, MySQL, Debezium CDC, Apache Kafka, Bronze/Silver/Gold data products, feature engineering, demand forecasting, ranking, decision intelligence, semantic governance, CI/CD, Snowflake/dbt, Microsoft Fabric.  
-[Read the case study](/blog/haesiivooja-ai-marketplace-intelligence) · [View source on GitHub](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence)
+**Technologies:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Microsoft SQL Server metadata discovery, Microsoft Fabric REST API, lineage graphs, schema-drift detection, impact analysis, governance, data quality, Docker.  
+[Visit Cascadary](https://cascadary.com/) · [View source on GitHub](https://github.com/oleglihvoinen/cascadary-enterprise-data-intelligence)
 
 ### 🧭 [Master Data Management Tool](/blog/master-data-management)
-A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing and harmonisation.
+A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing, harmonisation and governed master-data workflows.
 
-**Technologies:** Oracle APEX, Oracle Database, PL/SQL.  
+**Technologies:** Oracle APEX, Oracle Database, PL/SQL, MDM, data quality.  
 [Explore the tool and demo](/blog/master-data-management)
+
+---
+
+## Building SaaS Marketplaces
+
+I build **customer-facing SaaS marketplaces from product experience to backend and data platform**: searchable supply, provider profiles, availability, bookings, operational workflows, web/mobile experiences and the data/AI capabilities around them.
+
+### 📱 [HaeSiivooja — Cleaning Services SaaS Marketplace](/blog/haesiivooja-saas-marketplace)
+A Finnish **two-sided SaaS marketplace** connecting customers with cleaning professionals. Customers can discover cleaners, compare service information and pricing, and arrange bookings; cleaning professionals can manage profiles, availability and prices and receive work opportunities. The ecosystem includes web, **Android (Kotlin)** and **iOS (Swift)** experiences.
+
+[Read the marketplace case](/blog/haesiivooja-saas-marketplace) · [Visit HaeSiivooja](https://haesiivooja.fi/)
+
+### ✨ [HaeSiivooja AI Cleaning Company Search](https://app.haesiivooja.fi/)
+An **AI-powered search experience for cleaning companies in Finland**, built as a separate product surface within the HaeSiivooja ecosystem. It extends the marketplace beyond traditional category/filter navigation and demonstrates how AI-assisted discovery can be added to a vertical SaaS marketplace.
+
+[Open the AI-powered cleaning company search](https://app.haesiivooja.fi/)
+
+### 🤖 [HaeSiivooja Real-Time Marketplace Intelligence & AI Decision Platform](/blog/haesiivooja-ai-marketplace-intelligence)
+A **real-time data engineering and AI decision platform** built around the HaeSiivooja marketplace domain. MySQL operational changes flow through Debezium CDC and Kafka into governed Bronze/Silver/Gold data products, forecasting, cleaner ranking, semantic metrics and recommendation-only operational decisions with policy and human-approval controls.
+
+**Technologies:** Python, Pandas, scikit-learn, FastAPI, MySQL, Debezium CDC, Apache Kafka, Bronze/Silver/Gold data products, forecasting, ranking, decision intelligence, semantic governance, CI/CD.  
+[Read the data & AI case](/blog/haesiivooja-ai-marketplace-intelligence) · [View source on GitHub](https://github.com/oleglihvoinen/haesiivooja-ai-marketplace-intelligence)
+
+### 🏠 [Contractor.fi — Home Services SaaS Marketplace](https://contractor.fi/)
+A Finnish **home renovation, repair and outdoor-work marketplace** connecting customers with professional contractors. The platform supports customer and contractor registration, provider profiles, service-area search, availability, booking requests and confirmations, job workflows, invoice drafts, reviews, email verification, password recovery and administration. It also includes Finnish/English public content, PRH-based company-data lookup and SEO/service-guide structure for marketplace discovery.
+
+**Technologies:** Django, Python, MySQL, Gunicorn, Nginx, HTML/CSS/JavaScript, scheduling and booking workflows, invoicing, transactional email, PRH company-data integration, CI/testing.  
+[Visit Contractor.fi](https://contractor.fi/) · [View source on GitHub](https://github.com/oleglihvoinen/contractor)
 
 ---
 
