@@ -21,11 +21,15 @@ I design data solutions around clear contracts, reliable pipelines, governed bus
 
 My enterprise data work focuses on **master data management, governance, lineage, data quality and change impact**: understanding what data means, who owns it, how it moves, and what downstream systems are affected when it changes.
 
-### 🧩 [Cascadary — Enterprise Data Intelligence & Change Impact](https://cascadary.com/)
-A self-hosted **enterprise data governance and change-intelligence platform** for cataloging data assets, exploring lineage, detecting schema drift, assessing downstream change impact, managing glossary terms and policies, tracking data-quality controls, approvals, scans and audit history. Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors and is designed to make enterprise data changes easier to understand before they affect downstream consumers.
+### 🧩 [Cascadary — Enterprise Data Intelligence, Semantic Layer & Ontology](https://cascadary.com/)
+A self-hosted **enterprise data governance and intelligence platform** centered on a governed **semantic layer, business ontology and business glossary**. Cascadary connects technical metadata to business meaning so data assets, metrics, concepts and relationships can be understood consistently across the organization. It also includes lineage, schema-drift detection, downstream change-impact analysis, data-quality controls, policies, approvals, scan history and audit trails.
 
-**Technologies:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Microsoft SQL Server metadata discovery, Microsoft Fabric REST API, lineage graphs, schema-drift detection, impact analysis, governance, data quality, Docker.  
-[Visit Cascadary](https://cascadary.com/) · [View source on GitHub](https://github.com/oleglihvoinen/cascadary-enterprise-data-intelligence)
+The ontology layer models core business concepts and their relationships, while the semantic layer defines governed business meaning for metrics, dimensions and analytical concepts. The business glossary provides shared definitions, ownership and terminology so technical assets and business language remain connected.
+
+Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors, allowing discovered technical assets to be linked with semantic definitions, glossary terms, ontology concepts and lineage.
+
+**Technologies:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Microsoft SQL Server metadata discovery, Microsoft Fabric REST API, semantic layer, business ontology, business glossary, lineage graphs, schema-drift detection, impact analysis, governance, data quality, Docker.  
+[Visit Cascadary](https://cascadary.com/)
 
 ### 🧭 [Master Data Management Tool](/blog/master-data-management)
 A browser-based **MDM and data quality application** built with Oracle APEX. It combines CSV import and export, configurable business rules, validation runs, error dashboards, and record management to support data cleansing, harmonisation and governed master-data workflows.
