@@ -26,7 +26,7 @@ A self-hosted **enterprise data governance and intelligence platform** centered 
 
 The ontology layer models core business concepts and their relationships, while the semantic layer defines governed business meaning for metrics, dimensions and analytical concepts. The business glossary provides shared definitions, ownership and terminology so technical assets and business language remain connected.
 
-Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors, allowing discovered technical assets to be linked with semantic definitions, glossary terms, ontology concepts and lineage. Its connector architecture is extensible, so additional source-system connectors can be added on the fly without changing the core semantic, ontology and governance model.
+Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors, allowing discovered technical assets to be linked with semantic definitions, glossary terms, ontology concepts and lineage. Its connector architecture is extensible: **any connector can be added on the fly** for a new source system or platform without changing the core semantic, ontology and governance model.
 
 **Technologies:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Microsoft SQL Server metadata discovery, Microsoft Fabric REST API, semantic layer, business ontology, business glossary, lineage graphs, schema-drift detection, impact analysis, governance, data quality, Docker.  
 [Visit Cascadary](https://cascadary.com/)
