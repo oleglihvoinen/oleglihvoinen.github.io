@@ -26,7 +26,7 @@ A self-hosted **enterprise data governance and intelligence platform** centered 
 
 The ontology layer models core business concepts and their relationships, while the semantic layer defines governed business meaning for metrics, dimensions and analytical concepts. The business glossary provides shared definitions, ownership and terminology so technical assets and business language remain connected.
 
-Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors, allowing discovered technical assets to be linked with semantic definitions, glossary terms, ontology concepts and lineage.
+Cascadary includes SQL Server metadata discovery and Microsoft Fabric metadata discovery connectors, allowing discovered technical assets to be linked with semantic definitions, glossary terms, ontology concepts and lineage. Its connector architecture is extensible, so additional source-system connectors can be added on the fly without changing the core semantic, ontology and governance model.
 
 **Technologies:** Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Microsoft SQL Server metadata discovery, Microsoft Fabric REST API, semantic layer, business ontology, business glossary, lineage graphs, schema-drift detection, impact analysis, governance, data quality, Docker.  
 [Visit Cascadary](https://cascadary.com/)
@@ -63,7 +63,7 @@ A **real-time data engineering and AI decision platform** built around the HaeSi
 A Finnish **home renovation, repair and outdoor-work marketplace** connecting customers with professional contractors. The platform supports customer and contractor registration, provider profiles, service-area search, availability, booking requests and confirmations, job workflows, invoice drafts, reviews, email verification, password recovery and administration. It also includes Finnish/English public content, PRH-based company-data lookup and SEO/service-guide structure for marketplace discovery.
 
 **Technologies:** Django, Python, MySQL, Gunicorn, Nginx, HTML/CSS/JavaScript, scheduling and booking workflows, invoicing, transactional email, PRH company-data integration, CI/testing.  
-[Visit Contractor.fi](https://contractor.fi/) · [View source on GitHub](https://github.com/oleglihvoinen/contractor)
+[Visit Contractor.fi](https://contractor.fi/)
 
 ---
 
